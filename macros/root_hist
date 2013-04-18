@@ -1,0 +1,147 @@
+.x xydy.C
+.q
+.x xydy.C
+.q
+.L xydy.C
+xydy("xydy.dat")
+gr = gtemp()
+gr->GetEntries()
+gr->GetN()
+.q
+.x xydy.C
+.q
+.x xydy.C
+.x xydy.C
+.qqqqqqqqqqqqqqqqqqq
+.x xydy.C
+.x xydy.C
+.x gauss.C
+.! gvim gauss.C
+ triagArea()
+png("triagarea")
+.!rm triagarea.png
+2.5*5323*(30/4)
+sqrt(2*3.14159)*5323*(30./4)
+sqrt(2*3.14159)
+2.5*5323*(30./4)
+2.5*5323*(30/4)
+2.5*5323*(30./4)
+.! ls /home/zatserkl/macros/utils_C_ACLiC_linkdef.h
+.q
+history()
+.q
+.L rootalias.C+
+.q
+.! ls /home/zatserkl/macros/utils_C_ACLiC_linkdef.h
+.q
+.x gauss.C
+.q
+.x gauss.C+
+.q
+.x xydy.C
+.q
+.x xydy.C
+gROOT->GetListOfFiles()
+new TCanvas;
+gROOT->GetListOfCanvases()
+gPad->GetListOfPrimitives()
+.q
+//-- Mon Oct 18 13:23:40 CDT 2010
+.x correlation.C+
+.q
+//-- Mon Oct 18 13:24:05 CDT 2010
+.L correlation.C+
+corr(10)
+//-- Mon Oct 18 13:24:37 CDT 2010
+.L gaussbkg.C+
+gaussbkg()
+//-- Mon Oct 18 13:25:31 CDT 2010
+.x gaussbkg.C+
+.q
+//-- Mon Oct 18 13:26:10 CDT 2010
+.x gaussbkg.C+
+//-- Mon Oct 18 13:27:36 CDT 2010
+.x gaussbkg.C+
+.q
+//-- Mon Oct 18 13:30:30 CDT 2010
+.x gaussbkg.C+
+//-- Mon Oct 18 13:37:51 CDT 2010
+.x gaussbkg.C+
+//-- Mon Oct 18 13:39:15 CDT 2010
+.x gaussbkg.C+
+.q
+//-- Mon Oct 18 13:39:29 CDT 2010
+.x gaussbkg.C+
+//-- Mon Oct 18 13:41:12 CDT 2010
+.x gaussbkg.C+
+//-- Wed Dec 15 13:08:24 CST 2010
+//-- Mon Feb 28 19:28:21 CST 2011
+//-- Tue Mar 15 17:08:08 CDT 2011
+.q
+//-- Tue Mar 15 17:08:33 CDT 2011
+.q
+//-- Mon Apr 18 13:51:32 CDT 2011
+.q
+//-- Tue May 10 04:08:05 CDT 2011
+.q
+//-- Tue May 10 04:09:07 CDT 2011
+.q
+//-- Tue May 10 04:10:04 CDT 2011
+.q
+//-- Tue May 10 04:10:35 CDT 2011
+.q
+//-- Sun Jun 12 08:20:47 CDT 2011
+.x nfitpoints.C
+.q
+//-- Mon Jul 4 00:08:24 EDT 2011
+.q
+//-- Thu Sep 22 16:30:39 PDT 2011
+.q
+//-- Wed Jan 25 11:10:49 PST 2012
+.x refit.C
+.q
+//-- Wed Jan 25 11:12:04 PST 2012
+.x refit.C
+.q
+//-- Mon Jan 30 19:49:48 PST 2012
+2.5*5323*30
+//-- Fri Feb 3 15:19:40 PST 2012
+.L read_data.C
+read_data()
+.q
+//-- Thu Feb 21 13:15:53 PST 2013
+.L alipulse.C+
+.q
+//-- Thu Feb 21 14:27:24 PST 2013
+.q
+//-- Thu Feb 21 14:29:03 PST 2013
+.q
+//-- Thu Feb 21 14:30:34 PST 2013
+.q
+//-- Thu Feb 21 14:32:12 PST 2013
+.q
+//-- Thu Feb 21 14:32:55 PST 2013
+.q
+//-- Thu Feb 21 14:33:27 PST 2013
+.q
+//-- Thu Feb 21 14:35:49 PST 2013
+.q
+//-- Thu Feb 21 14:37:28 PST 2013
+.,q
+.q
+//-- Thu Feb 21 14:38:02 PST 2013
+.q
+//-- Fri Feb 22 19:39:55 PST 2013
+.q
+//-- Fri Feb 22 20:28:16 PST 2013
+.q
+//-- Fri Feb 22 20:35:43 PST 2013
+.q
+//-- Wed Mar 27 13:36:45 PDT 2013
+.q
+//-- Wed Mar 27 13:40:42 PDT 2013
+.q
+//-- Wed Mar 27 13:58:45 PDT 2013
+.q
+//-- Mon Apr 8 21:39:38 PDT 2013
+.q

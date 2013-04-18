@@ -1,0 +1,182 @@
+MACRO tadc3 file=' '
+if $UPPER([1])='HELP' .OR. [file]='' .OR. [file]=' ' then
+   mess Usage:    [0] filename
+   mess Example:  [0] data.out
+   stopm
+endif
+
+if $HEXIST(1141) then ; h/de 1141 ; endif
+if $HEXIST(1142) then ; h/de 1142 ; endif
+if $HEXIST(1143) then ; h/de 1143 ; endif
+if $HEXIST(22491) then ; h/de 22491 ; endif
+if $HEXIST(22492) then ; h/de 22492 ; endif
+if $HEXIST(22493) then ; h/de 22493 ; endif
+
+SIGMA ped=array(3)
+v/inp ped(1) 49
+v/inp ped(2) 27
+v/inp ped(3) 28
+
+* opt nstat
+opt stat
+set stat 10
+opt fit
+
+nt/crea 1 test3 6 ! ! t1 t2 t3 a1 a2 a3
+
+* if ([file].eq.' ') then
+*    file = 'data.out'
+* endif
+
+if $FEXIST([file]) = 0 then
+   mess File not found: [file]
+   stopm
+endif
+
+nt/read 1 [file]
+
+zone 3 2
+*zone 1 1
+* NTUPLE/PLOT IDN [ UWFUNC NEVENT IFIRST NUPD OPTION IDH ]
+
+nt/pl 1.t1 t1>0.and.t1<6000 ! ! ! N 1141
+nt/pl 1.t2 t2>0.and.t2<6000 ! ! ! N 1142
+nt/pl 1.t3 t3>0.and.t3<6000 ! ! ! N 1143
+
+nt/pl 1.a1 !     ! ! ! N 22491
+nt/pl 1.a2 !     ! ! ! N 22492
+nt/pl 1.a3 !     ! ! ! N 22493
+
+*nt/pl 1.a a>1     ! ! ! N 2249
+* nt/pl 1.a a>1.and.a<200     ! ! ! N 2249
+
+if $VEXIST(p1141) = 0 then; v/cr p1141(3) ; endif
+if $VEXIST(p1142) = 0 then; v/cr p1142(3) ; endif
+if $VEXIST(p1143) = 0 then; v/cr p1143(3) ; endif
+
+if $VEXIST(p22491) = 0 then; v/cr p22491(3) ; endif
+if $VEXIST(p22492) = 0 then; v/cr p22492(3) ; endif
+if $VEXIST(p22493) = 0 then; v/cr p22493(3) ; endif
+
+APPL COMIS QUIT
+      SUBROUTINE printd(p114,p2249,ped)
+      REAL p114(3), p2249(3)
+      REAL tmean, tsig, amean, asig, ped, Npe
+      tmean = p114(2)
+      tsig = p114(3)
+      amean = p2249(2)
+      asig = p2249(3)
+      Npe = ((ampl-ped)/sigma)**2
+*     print *, 'Time', tmean, '+-', tsig, 'Ampl', amean, "+-", asig, 'Npe', Npe
+      print *, 'Time', tmean, '+-', tsig
+      END
+
+      REAL FUNCTION Npe(ped, ampl, sig)
+      Npe = ((ampl-ped)/sig)**2
+      END
+QUIT
+
+hist/fit 1141 g ! ! p1141
+hist/fit 1142 g ! ! p1142
+hist/fit 1143 g ! ! p1143
+hist/fit 22491 g ! ! p22491
+hist/fit 22492 g ! ! p22492
+hist/fit 22493 g ! ! p22493
+
+mess #1: Time $EVAL(p1141(2)) sig $EVAL(p1141(3))   Ampl $EVAL(p22491(2)) sig $EVAL(p22491(3)) Npe $SIGMA(((p22491(2)-ped(1))/p22491(3))**2)
+mess #2: Time $EVAL(p1142(2)) sig $EVAL(p1142(3))   Ampl $EVAL(p22492(2)) sig $EVAL(p22492(3)) Npe $SIGMA(((p22492(2)-ped(2))/p22492(3))**2)
+mess #3: Time $EVAL(p1143(2)) sig $EVAL(p1143(3))   Ampl $EVAL(p22493(2)) sig $EVAL(p22493(3)) Npe $SIGMA(((p22493(2)-ped(3))/p22493(3))**2)
+*call printd(p1141, p22491, ped)
+
+picture/print tadc123.gif
+RETURN
+
+MACRO time
+zone 1 3
+nt/pl 1.t1 t1>0.and.t1<6000 ! ! ! N 1141
+nt/pl 1.t2 t2>0.and.t2<6000 ! ! ! N 1142
+nt/pl 1.t3 t3>0.and.t3<6000 ! ! ! N 1143
+hist/fit 1141 g ! ! p1141
+hist/fit 1142 g ! ! p1142
+hist/fit 1143 g ! ! p1143
+mess #1: Time $EVAL(p1141(2)) sig $EVAL(p1141(3))
+mess #2: Time $EVAL(p1142(2)) sig $EVAL(p1142(3))
+mess #3: Time $EVAL(p1143(2)) sig $EVAL(p1143(3))
+picture/print time123.gif
+RETURN
+
+MACRO ampl
+zone 1 3
+nt/pl 1.a1 !     ! ! ! N 22491
+nt/pl 1.a2 !     ! ! ! N 22492
+nt/pl 1.a3 !     ! ! ! N 22493
+hist/fit 22491 g ! ! p22491
+hist/fit 22492 g ! ! p22492
+hist/fit 22493 g ! ! p22493
+mess #1: Ampl $EVAL(p22491(2)) sig $EVAL(p22491(3)) Npe $SIGMA(((p22491(2)-ped(1))/p22491(3))**2)
+mess #2: Ampl $EVAL(p22492(2)) sig $EVAL(p22492(3)) Npe $SIGMA(((p22492(2)-ped(2))/p22492(3))**2)
+mess #3: Ampl $EVAL(p22493(2)) sig $EVAL(p22493(3)) Npe $SIGMA(((p22493(2)-ped(3))/p22493(3))**2)
+picture/print ampl123.gif
+RETURN
+
+MACRO amplnofit
+zone 1 3
+nt/pl 1.a1 !     ! ! ! ! 22491
+nt/pl 1.a2 !     ! ! ! ! 22492
+nt/pl 1.a3 !     ! ! ! ! 22493
+* hist/fit 22491 g ! ! p22491
+* hist/fit 22492 g ! ! p22492
+* hist/fit 22493 g ! ! p22493
+* mess #1: Ampl $EVAL(p22491(2)) sig $EVAL(p22491(3)) Npe $SIGMA(((p22491(2)-ped(1))/p22491(3))**2)
+* mess #2: Ampl $EVAL(p22492(2)) sig $EVAL(p22492(3)) Npe $SIGMA(((p22492(2)-ped(2))/p22492(3))**2)
+* mess #3: Ampl $EVAL(p22493(2)) sig $EVAL(p22493(3)) Npe $SIGMA(((p22493(2)-ped(3))/p22493(3))**2)
+* picture/print ampl123.gif
+RETURN
+
+MACRO corr1
+zone 1 1
+igset mtyp 6
+nt/pl 1.t1%a1 t1>0.and.t1<6000
+RETURN
+
+MACRO corr2
+zone 1 1
+igset mtyp 6
+nt/pl 1.t2%a2 t2>0.and.t2<6000
+RETURN
+
+MACRO corr3
+zone 1 1
+igset mtyp 6
+nt/pl 1.t3%a3 t3>0.and.t3<6000
+RETURN
+
+MACRO plot1
+zone 2 1
+nt/pl 1.t1 t1>0.and.t1<6000 ! ! ! N 1141
+nt/pl 1.a1 !     ! ! ! N 22491
+hist/fit 1141 g ! ! p1141
+hist/fit 22491 g ! ! p22491
+mess #3: Time $EVAL(p1141(2)) sig $EVAL(p1141(3))   Ampl $EVAL(p22491(2)) sig $EVAL(p22491(3)) Npe $SIGMA(((p22491(2)-ped(1))/p22491(3))**2)
+picture/print tadc1.gif
+RETURN
+
+MACRO plot2
+zone 2 1
+nt/pl 1.t2 t2>0.and.t2<6000 ! ! ! N 1142
+nt/pl 1.a2 !     ! ! ! N 22492
+hist/fit 1143 g ! ! p1142
+hist/fit 22493 g ! ! p22492
+mess #3: Time $EVAL(p1142(2)) sig $EVAL(p1142(3))   Ampl $EVAL(p22492(2)) sig $EVAL(p22492(3)) Npe $SIGMA(((p22492(2)-ped(2))/p22492(3))**2)
+picture/print tadc2.gif
+RETURN
+
+MACRO plot3
+zone 2 1
+nt/pl 1.t3 t3>0.and.t3<6000 ! ! ! N 1143
+nt/pl 1.a3 !     ! ! ! N 22493
+hist/fit 1143 g ! ! p1143
+hist/fit 22493 g ! ! p22493
+mess #3: Time $EVAL(p1143(2)) sig $EVAL(p1143(3))   Ampl $EVAL(p22493(2)) sig $EVAL(p22493(3)) Npe $SIGMA(((p22493(2)-ped(3))/p22493(3))**2)
+picture/print tadc3.gif
+RETURN

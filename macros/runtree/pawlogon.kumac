@@ -1,0 +1,12 @@
+MACRO PAWLOGON
+exec $ENV(HOME)/.pawlogon
+mess Local PAWLOGON
+alias/create -C x 'exec'
+LCDIR
+mess Hello, folks!
+
+igset 2buf 11
+
+* exec $ENV(HOME)/.pawlogon#BigWin
+* exec $ENV(HOME)/.pawlogon#XARGS
+RETURN

@@ -1,0 +1,8 @@
+# cp -i ~/macros/rootrc ./.rootrc
+
+#
+# I'm keeping .rootrc in the home dir only
+#
+
+# cat ${ROOTSYS}/etc/system.rootrc | sed 's:$(ROOTSYS)/macros:$(HOME)/macros:g' | sed 's:$(HOME)/.root_hist:./root_hist:g' | sed 's:\*-10-\*:\*-12-\*:g' > ./.rootrc
+cp -ip ~/macros/rootlogon-local.C ./rootlogon.C

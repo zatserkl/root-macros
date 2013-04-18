@@ -1,0 +1,11 @@
+ NB: line which does not start from 3 numbers will be ignored
+ 1   1   .5     part of line after 3 numbers is ignored
+2   20  2--- this is a correct line as well
+3   30  3
+4   25  3
+5   35  4
+100
+# NB: last three lines: line with spaces " " and two empty lines
+   
+
+

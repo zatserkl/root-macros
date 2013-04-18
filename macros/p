@@ -1,0 +1,11 @@
+{
+  // first -- pan, to TBrowser panel to cover panels
+  //gROOT->LoadMacro("dialogs.C");
+  gROOT->LoadMacro("utils.C");
+  pan();
+  
+  // new TBrowser;
+  // new TBrowser("TBrowser", "TBrowser", 700, 0, 550, 700);
+  //-- new TBrowser("TBrowser", "TBrowser", 600, 0, 400, 500);
+  new TBrowser("TBrowser", "TBrowser", 600, 0, 670, 500);
+}

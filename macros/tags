@@ -1,0 +1,1125 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+A	laserfit.C	/^   Double_t A;$/;"	m	class:PulseParameters	file:
+A	mkplain/MkProPlain.C	/^   Float_t  A;                   \/\/ Asymmetry = (met - mht)\/(met + mht)$/;"	m	namespace:Tree	file:
+A	pulse.C	/^   Double_t A;$/;"	m	class:PulseParameters	file:
+ACPlain	rootcolor.C	6;"	d	file:
+ACPlain	rootcolor.C	9;"	d	file:
+ACRed	rootcolor.C	5;"	d	file:
+ACRed	rootcolor.C	8;"	d	file:
+A_	current/pulse.C	/^   Double_t A_, x0_, tau1_, tau2_, T_, sigma_;$/;"	m	class:PulseFunction	file:
+BadClass	ClassDef_b.C	/^   BadClass(): a(0), dummy(0) {}$/;"	f	class:BadClass
+BadClass	ClassDef_b.C	/^class BadClass {$/;"	c	file:
+Book	point.C	/^   void Book(TTree* tree)$/;"	f	struct:PulseBuffer
+Book	pulsetree.C	/^   void Book(TTree* tree)$/;"	f	struct:PulseBuffer
+ClassDef_b	ClassDef_b.C	/^void ClassDef_b() {$/;"	f
+Clone	laserfit.C	/^   FitPulse* Clone() const {$/;"	f	class:FitPulse
+Clone	pulse.C	/^   FitPulse* Clone() const {$/;"	f	class:FitPulse
+Complete	laserfit.C	/^   Bool_t Complete() const$/;"	f	class:FitPulse
+Complete	laserfit.C	/^   virtual Bool_t Complete() const        \/\/ NB: virtual$/;"	f	class:Fitter
+Complete	pulse.C	/^   Bool_t Complete() const$/;"	f	class:FitPulse
+Complete	pulse.C	/^   virtual Bool_t Complete() const        \/\/ NB: virtual$/;"	f	class:Fitter
+CompleteDefault	laserfit.C	/^   Bool_t CompleteDefault() const {$/;"	f	class:FitBoard
+CompleteDefault	pulse.C	/^   Bool_t CompleteDefault() const {$/;"	f	class:FitBoard
+Connect	point.C	/^   void Connect(TTree* tree)$/;"	f	struct:PulseBuffer
+Connect	pulsetree.C	/^   void Connect(TTree* tree)$/;"	f	struct:PulseBuffer
+Convert	pulsetree.C	/^   void Convert(Int_t entry1=0, Int_t entry2=0)$/;"	f	class:Osc
+Day	pulsetree.C	/^   UInt_t Day() const {return oscRecord.event.time.day;}$/;"	f	class:OscBin
+DefaultClone	laserfit.C	/^   void DefaultClone() {$/;"	f	class:FitBoard
+DefaultClone	pulse.C	/^   void DefaultClone() {$/;"	f	class:FitBoard
+Derivative	pulse.C	/^   Double_t Derivative(Double_t x, Double_t* params=0, Double_t epsilon=0.001) const {$/;"	f	class:Fitter
+DerivativeFunctor	utils.C	/^   DerivativeFunctor(TF1* tf1): tf1_(tf1) {}$/;"	f	class:DerivativeFunctor
+DerivativeFunctor	utils.C	/^class DerivativeFunctor { $/;"	c	file:
+Disconnect	point.C	/^   void Disconnect(TTree* tree) {$/;"	f	struct:PulseBuffer
+Disconnect	pulsetree.C	/^   void Disconnect(TTree* tree) {$/;"	f	struct:PulseBuffer
+Disk	classtree.C	/^   Disk() {$/;"	f	class:Disk
+Disk	classtree.C	/^ClassImp(Disk);$/;"	v
+Disk	classtree.C	/^class Disk {$/;"	c	file:
+Disk	classtree/classtree.h	/^   Disk(): TObject() {$/;"	f	class:Disk
+Disk	classtree/classtree.h	/^class Disk: public TObject {$/;"	c
+DrawTextFile	pan.C	/^void DrawTextFile() {$/;"	f
+Eval	pulse.C	/^   Double_t Eval(Double_t x) const {$/;"	f	class:Fitter
+Exist	laserfit.C	/^   Bool_t Exist(Int_t i) const {$/;"	f	class:Fitter
+Exist	laserfit.C	/^   Bool_t Exist(const std::string parname) const {$/;"	f	class:Fitter
+Exist	pulse.C	/^   Bool_t Exist(Int_t i) const {$/;"	f	class:Fitter
+Exist	pulse.C	/^   Bool_t Exist(const std::string parname) const {$/;"	f	class:Fitter
+Fit	laserfit.C	/^   Fit(): ffit_(0)$/;"	f	class:Fit
+Fit	laserfit.C	/^   void Fit(TGraph* g, Option_t* option, Option_t* goption, Double_t xmin, Double_t xmax) {$/;"	f	class:Fitter
+Fit	laserfit.C	/^   void Fit(TH1* h, Option_t* option, Option_t* goption, Double_t xmin, Double_t xmax) {$/;"	f	class:Fitter
+Fit	laserfit.C	/^class Fit {$/;"	c	file:
+Fit	pulse.C	/^   void Fit(TGraph* g, Option_t* option, Option_t* goption, Double_t xmin, Double_t xmax) {$/;"	f	class:Fitter
+Fit	pulse.C	/^   void Fit(TH1* h, Option_t* option, Option_t* goption, Double_t xmin, Double_t xmax) {$/;"	f	class:Fitter
+FitBoard	laserfit.C	/^   FitBoard(Int_t nchan): nchan_(nchan)$/;"	f	class:FitBoard
+FitBoard	laserfit.C	/^class FitBoard {$/;"	c	file:
+FitBoard	pulse.C	/^   FitBoard(Int_t nchan): nchan_(nchan)$/;"	f	class:FitBoard
+FitBoard	pulse.C	/^   FitBoard(const FitBoard& fit): nchan_(fit.nchan_)$/;"	f	class:FitBoard
+FitBoard	pulse.C	/^class FitBoard {$/;"	c	file:
+FitFun	laserfit.C	/^   TF1* FitFun()  \/\/ use this for fit$/;"	f	class:Fitter
+FitFun	pulse.C	/^   TF1* FitFun()  \/\/ use this for fit$/;"	f	class:Fitter
+FitPulse	laserfit.C	/^   FitPulse(Double_t xmin, Double_t xmax): Fitter(xmin,xmax)$/;"	f	class:FitPulse
+FitPulse	laserfit.C	/^   FitPulse(const FitPulse& fitter): Fitter(fitter)$/;"	f	class:FitPulse
+FitPulse	laserfit.C	/^class FitPulse: public Fitter {$/;"	c	file:
+FitPulse	pulse.C	/^   FitPulse(Double_t xmin, Double_t xmax): Fitter(xmin,xmax)$/;"	f	class:FitPulse
+FitPulse	pulse.C	/^   FitPulse(const FitPulse& fitter): Fitter(fitter)$/;"	f	class:FitPulse
+FitPulse	pulse.C	/^class FitPulse: public Fitter {$/;"	c	file:
+Fitter	laserfit.C	/^   Fitter(): tf1_(0)$/;"	f	class:Fitter
+Fitter	laserfit.C	/^   Fitter(Double_t xmin, Double_t xmax): tf1_(0)$/;"	f	class:Fitter
+Fitter	laserfit.C	/^   Fitter(const Fitter& fitter): tf1_(fitter.tf1_)$/;"	f	class:Fitter
+Fitter	laserfit.C	/^class Fitter {$/;"	c	file:
+Fitter	pulse.C	/^   Fitter(): tf1_(0)$/;"	f	class:Fitter
+Fitter	pulse.C	/^   Fitter(Double_t xmin, Double_t xmax): tf1_(0)$/;"	f	class:Fitter
+Fitter	pulse.C	/^   Fitter(const Fitter& fitter): tf1_(new TF1(*fitter.tf1_))$/;"	f	class:Fitter
+Fitter	pulse.C	/^class Fitter {$/;"	c	file:
+Fix	laserfit.C	/^   void Fix(const std::string& parname) {$/;"	f	class:Fit
+Fix	laserfit.C	/^   void Fix(const std::string& parname) {$/;"	f	class:Fitter
+Fix	pulse.C	/^   void Fix(const std::string& parname) {$/;"	f	class:FitBoard
+Fix	pulse.C	/^   void Fix(const std::string& parname) {$/;"	f	class:Fitter
+FixAll	laserfit.C	/^   void FixAll() {$/;"	f	class:Fitter
+FixAll	pulse.C	/^   void FixAll() {$/;"	f	class:Fitter
+GetChisquare	pulse.C	/^   Double_t GetChisquare() const {$/;"	f	class:Fitter
+GetEventPointer	pulsetree.C	/^   Long64_t GetEventPointer()$/;"	f	class:OscBin
+GetFloatDialog	dialogs.C	/^Float_t GetFloatDialog(const char *prompt, Float_t defval)$/;"	f
+GetIntegerDialog	dialogs.C	/^Int_t GetIntegerDialog(const char *prompt, Int_t defval)$/;"	f
+GetLineColor	pulse.C	/^   Int_t GetLineColor() const {$/;"	f	class:Fitter
+GetMaximum	pulse.C	/^   Double_t GetMaximum(Double_t xmin, Double_t xmax, Double_t epsilon=1.E-10, Int_t maxiter=100) const {$/;"	f	class:Fitter
+GetMaximumX	pulse.C	/^   Double_t GetMaximumX(Double_t xmin=0, Double_t xmax=0, Double_t epsilon=1.E-10, Int_t maxiter=100) const {$/;"	f	class:Fitter
+GetNDF	pulse.C	/^   Double_t GetNDF() const {$/;"	f	class:Fitter
+GetNpar	laserfit.C	/^   Int_t GetNpar() const {$/;"	f	class:PulseParameters
+GetNpar	pulse.C	/^   Int_t GetNpar() const {$/;"	f	class:PulseParameters
+GetParameter	pulse.C	/^   Double_t GetParameter(const char* name) const {$/;"	f	class:Fitter
+GetParameters	laserfit.C	/^   void GetParameters(Double_t* par) const {$/;"	f	class:PulseParameters
+GetParameters	pulse.C	/^   void GetParameters(Double_t* par) const {$/;"	f	class:PulseParameters
+GetStringDialog	dialogs.C	/^const char *GetStringDialog(const char *prompt, const char *defval)$/;"	f
+GetX	pulse.C	/^   Double_t GetX(Double_t y, Double_t xmin, Double_t xmax, Double_t accuracy) const {$/;"	f	class:Fitter
+Get_A	laserfit.C	/^   Double_t Get_A() const {return A;}$/;"	f	class:PulseParameters
+Get_A	pulse.C	/^   Double_t Get_A() const {return A;}$/;"	f	class:PulseParameters
+Get_T	laserfit.C	/^   Double_t Get_T() const {return T;}$/;"	f	class:PulseParameters
+Get_T	pulse.C	/^   Double_t Get_T() const {return T;}$/;"	f	class:PulseParameters
+HCyl	classtree.C	/^   HCyl() {$/;"	f	class:HCyl
+HCyl	classtree.C	/^ClassImp(HCyl);$/;"	v
+HCyl	classtree.C	/^class HCyl {$/;"	c	file:
+HCyl	classtree/classtree.C	/^ClassImp(HCyl);$/;"	v
+HCyl	classtree/classtree.h	/^   HCyl(): TObject() {$/;"	f	class:HCyl
+HCyl	classtree/classtree.h	/^class HCyl: public TObject {$/;"	c
+Hour	pulsetree.C	/^   UInt_t Hour() const {return oscRecord.event.time.hour;}$/;"	f	class:OscBin
+ITtau	laserfit.C	/^Double_t ITtau(Double_t x, Double_t tau, Double_t T)$/;"	f
+ITtau	point-debugfit.C	/^Double_t ITtau(Double_t x, Double_t tau, Double_t T)$/;"	f
+ITtau	point.C	/^Double_t ITtau(Double_t x, Double_t tau, Double_t T)$/;"	f
+ITtau	pulse.C	/^Double_t ITtau(Double_t x, Double_t tau, Double_t T)$/;"	f
+ITtausigma	current/pulse.C	/^   static Double_t ITtausigma(Double_t x, Double_t tau, Double_t T, Double_t sigma)$/;"	f	class:PulseFunction
+ITtausigma	current/pulse.C	/^Double_t ITtausigma(Double_t x, Double_t tau, Double_t T, Double_t sigma)$/;"	f
+ITtausigma	current/pulsemax.C	/^Double_t ITtausigma(Double_t x, Double_t tau, Double_t T, Double_t sigma)$/;"	f
+ITtausigma	laserfit.C	/^Double_t ITtausigma(Double_t x, Double_t tau, Double_t T, Double_t sigma)$/;"	f
+ITtausigma	point-debugfit.C	/^Double_t ITtausigma(Double_t x, Double_t tau, Double_t T, Double_t sigma)$/;"	f
+ITtausigma	point.C	/^Double_t ITtausigma(Double_t x, Double_t tau, Double_t T, Double_t sigma)$/;"	f
+ITtausigma	pulse.C	/^Double_t ITtausigma(Double_t x, Double_t tau, Double_t T, Double_t sigma)$/;"	f
+Index	laserfit.C	/^   Int_t Index(const std::string& parname) const {$/;"	f	class:Fit
+Index	laserfit.C	/^   Int_t Index(const std::string& parname) const {$/;"	f	class:Fitter
+Index	pulse.C	/^   Int_t Index(const std::string& parname) const {$/;"	f	class:Fitter
+InputDialog	dialogs.C	/^InputDialog::InputDialog(const char *prompt, const char *defval, char *retstr)$/;"	f	class:InputDialog
+InputDialog	dialogs.C	/^class InputDialog {$/;"	c	file:
+IntegralFunctor	utils.C	/^   IntegralFunctor(TF1* tf1): tf1_(tf1) {}$/;"	f	class:IntegralFunctor
+IntegralFunctor	utils.C	/^class IntegralFunctor { $/;"	c	file:
+Loop	mkplain/MkProPlain.C	/^void  TMBRoot::Loop(Int_t num, Int_t first) {cout<< "num=" << num << " first=" << first <<endl;}$/;"	f	class:TMBRoot
+Loop	mkplain/MkProPlain.C	/^void MkPro::Loop(Int_t num, Int_t first)$/;"	f	class:MkPro
+MAXDIM	arrtree.C	/^   const Int_t MAXDIM = 100;$/;"	m	namespace:Tree	file:
+MAXDIM	tree_array.C	/^   const Int_t MAXDIM = 100;$/;"	m	namespace:Tree	file:
+MAXDIM	tree_iarray.C	/^   const Int_t MAXDIM = 100;$/;"	m	namespace:Tree	file:
+MathLim	current/pulse.C	/^class MathLim {$/;"	c	file:
+Millisecond	pulsetree.C	/^   UInt_t Millisecond() const {return oscRecord.event.time.millisecond;}$/;"	f	class:OscBin
+Minute	pulsetree.C	/^   UInt_t Minute() const {return oscRecord.event.time.minute;}$/;"	f	class:OscBin
+MkProPlain_C	mkplain/MkProPlain.C	154;"	d	file:
+MkProPlain_C	mkplain/mkplain.C	1;"	d	file:
+NIM_plots	arrtree.C	/^void NIM_plots(const char* ifname="run_158.erik.root")$/;"	f
+NIM_plots	arrtree_array.C	/^void NIM_plots(const char* ifname="run_158.erik.root")$/;"	f
+NIM_plots	tree_array.C	/^void NIM_plots(const char* ifname="run_158.erik.root")$/;"	f
+NIM_plots	tree_iarray.C	/^void NIM_plots(const char* ifname="run_158.erik.root")$/;"	f
+Nchan	pulsetree.C	/^   UInt_t Nchan() const {return nchan;}$/;"	f	class:OscBin
+NextName	utils.C	/^TString NextName(TString base)$/;"	f
+Npx_	pulse.C	/^   Int_t Npx_;$/;"	m	class:Fitter	file:
+Number	pulsetree.C	/^   UInt_t Number() const {return oscRecord.event.time.number;}$/;"	f	class:OscBin
+Open	pulsetree.C	/^   bool Open(const char* ifname_)$/;"	f	class:OscBin
+OpenFileDialog	dialogs.C	/^const char *OpenFileDialog()$/;"	f
+Osc	pulsetree.C	/^   Osc(TTree* tree_): tree(tree_)$/;"	f	class:Osc
+Osc	pulsetree.C	/^   Osc(const char* ifname_): ifname(ifname_), tree(0)$/;"	f	class:Osc
+Osc	pulsetree.C	/^class Osc {$/;"	c	file:
+OscBin	pulsetree.C	/^   OscBin(): status(false) {}$/;"	f	class:OscBin
+OscBin	pulsetree.C	/^class OscBin {$/;"	c	file:
+OscChannel	drs.C	/^      OscChannel(): TObject() {$/;"	f	class:OscChannel
+OscChannel	drs.C	/^ClassImp(OscChannel);$/;"	v
+OscChannel	drs.C	/^class OscChannel: public TObject$/;"	c	file:
+OscChannel	osc.C	/^      OscChannel(): TObject() {$/;"	f	class:OscChannel
+OscChannel	osc.C	/^ClassImp(OscChannel);$/;"	v
+OscChannel	osc.C	/^class OscChannel: public TObject$/;"	c	file:
+OscChannel	point.C	/^      OscChannel(): TObject() {$/;"	f	class:OscChannel
+OscChannel	point.C	/^ClassImp(OscChannel);$/;"	v
+OscChannel	point.C	/^class OscChannel: public TObject$/;"	c	file:
+OscChannel	pulsetree.C	/^struct OscChannel {$/;"	s	file:
+OscEvent	drs.C	/^      OscEvent(): TObject() {$/;"	f	class:OscEvent
+OscEvent	drs.C	/^ClassImp(OscEvent);$/;"	v
+OscEvent	drs.C	/^class OscEvent: public TObject$/;"	c	file:
+OscEvent	osc.C	/^      OscEvent(): TObject() {$/;"	f	class:OscEvent
+OscEvent	osc.C	/^ClassImp(OscEvent);$/;"	v
+OscEvent	osc.C	/^class OscEvent: public TObject$/;"	c	file:
+OscEvent	point.C	/^      OscEvent(): TObject() {$/;"	f	class:OscEvent
+OscEvent	point.C	/^ClassImp(OscEvent);$/;"	v
+OscEvent	point.C	/^class OscEvent: public TObject$/;"	c	file:
+OscEvent	pulsetree.C	/^struct OscEvent {$/;"	s	file:
+OscFit	current/pulse.C	/^   OscFit(): TObject() {clear();}$/;"	f	class:OscFit
+OscFit	current/pulse.C	/^class OscFit: public TObject$/;"	c	file:
+OscFit	current/pulsemax.C	/^   OscFit(): TObject() {clear();}$/;"	f	class:OscFit
+OscFit	current/pulsemax.C	/^ClassImp(OscFit);$/;"	v
+OscFit	current/pulsemax.C	/^class OscFit: public TObject$/;"	c	file:
+OscFit	laserfit.C	/^   OscFit(): TNamed() {$/;"	f	class:OscFit
+OscFit	laserfit.C	/^ClassImp(OscFit);$/;"	v
+OscFit	laserfit.C	/^class OscFit: public TNamed$/;"	c	file:
+OscFit	point-debugfit.C	/^   OscFit(): TNamed() {$/;"	f	class:OscFit
+OscFit	point-debugfit.C	/^ClassImp(OscFit);$/;"	v
+OscFit	point-debugfit.C	/^class OscFit: public TNamed$/;"	c	file:
+OscFit	point.C	/^   OscFit(): TNamed() {$/;"	f	class:OscFit
+OscFit	point.C	/^ClassImp(OscFit);$/;"	v
+OscFit	point.C	/^class OscFit: public TNamed$/;"	c	file:
+OscFit	pulse.C	/^   OscFit(): TNamed() {$/;"	f	class:OscFit
+OscFit	pulse.C	/^ClassImp(OscFit);$/;"	v
+OscFit	pulse.C	/^class OscFit: public TNamed$/;"	c	file:
+OscRecord	pulsetree.C	/^   OscRecord() {for (unsigned i=0; i<sizeof(OscEvent); ++i) buffer[i] = 0;}$/;"	f	union:OscRecord
+OscRecord	pulsetree.C	/^union OscRecord {$/;"	u	file:
+OscTime	pulsetree.C	/^struct OscTime {$/;"	s	file:
+PrepareFit	laserfit.C	/^   virtual void PrepareFit(Fitter* fitter=0)$/;"	f	class:Fitter
+PrepareFit	laserfit.C	/^   void PrepareFit() {$/;"	f	class:FitBoard
+PrepareFit	laserfit.C	/^   void PrepareFit(Fit* fitter=0)$/;"	f	class:Fit
+PrepareFit	pulse.C	/^   virtual void PrepareFit(Fitter* fitter=0)$/;"	f	class:Fitter
+PrepareFit	pulse.C	/^   void PrepareFit() {$/;"	f	class:FitBoard
+PrepareFit	pulse.C	/^   void PrepareFit(int chan, Fitter* fitter=0) {$/;"	f	class:FitBoard
+PrintPars	pulse.C	/^   void PrintPars() const {$/;"	f	class:FitBoard
+PrintPars	pulse.C	/^   void PrintPars() const {for (int ipar=0; ipar<npar_; ++ipar) cout<< par_[ipar] << " ";}$/;"	f	class:Fitter
+PrintParsInit	pulse.C	/^   void PrintParsInit() const {$/;"	f	class:FitBoard
+PrintParsInit	pulse.C	/^   void PrintParsInit() const {for (int ipar=0; ipar<npar_; ++ipar) cout<< par_init_[ipar] << " ";}$/;"	f	class:Fitter
+PrintPulseParameters	laserfit.C	/^void PrintPulseParameters(TTree* ft)$/;"	f
+PrintPulseParameters	pulse.C	/^void PrintPulseParameters(TTree* ft)$/;"	f
+ProcessMessage	dialogs.C	/^void InputDialog::ProcessMessage(Long_t msg, Long_t parm1, Long_t parm2)$/;"	f	class:InputDialog
+Psigma	current/pulse.C	/^   static Double_t Psigma(Double_t x, Double_t tau1, Double_t tau2, Double_t T, Double_t sigma)$/;"	f	class:PulseFunction
+Psigma	current/pulse.C	/^Double_t Psigma(Double_t x, Double_t tau1, Double_t tau2, Double_t T, Double_t sigma)$/;"	f
+Psigma	current/pulsemax.C	/^Double_t Psigma(Double_t x, Double_t tau1, Double_t tau2, Double_t T, Double_t sigma)$/;"	f
+PulseBuffer	point.C	/^   PulseBuffer():$/;"	f	struct:PulseBuffer
+PulseBuffer	point.C	/^   PulseBuffer(TTree* tree) {$/;"	f	struct:PulseBuffer
+PulseBuffer	point.C	/^   PulseBuffer(const PulseBuffer& buf) {$/;"	f	struct:PulseBuffer
+PulseBuffer	point.C	/^struct PulseBuffer$/;"	s	file:
+PulseBuffer	pulsetree.C	/^   PulseBuffer():$/;"	f	struct:PulseBuffer
+PulseBuffer	pulsetree.C	/^   PulseBuffer(const PulseBuffer& buf) {$/;"	f	struct:PulseBuffer
+PulseBuffer	pulsetree.C	/^struct PulseBuffer$/;"	s	file:
+PulseFunction	current/pulse.C	/^   PulseFunction(Double_t A, Double_t x0, Double_t tau1, Double_t tau2, Double_t T, Double_t sigma,$/;"	f	class:PulseFunction
+PulseFunction	current/pulse.C	/^class PulseFunction: public MathLim {$/;"	c	file:
+PulseParameters	laserfit.C	/^   PulseParameters(): TNamed() {$/;"	f	class:PulseParameters
+PulseParameters	laserfit.C	/^ClassImp(PulseParameters);$/;"	v
+PulseParameters	laserfit.C	/^class PulseParameters: public TNamed {$/;"	c	file:
+PulseParameters	pulse.C	/^   PulseParameters(): TNamed() {$/;"	f	class:PulseParameters
+PulseParameters	pulse.C	/^ClassImp(PulseParameters);$/;"	v
+PulseParameters	pulse.C	/^class PulseParameters: public TNamed {$/;"	c	file:
+ReadEvent	pulsetree.C	/^   bool ReadEvent()$/;"	f	class:OscBin
+Release	laserfit.C	/^   void Release(const std::string& parname) {$/;"	f	class:Fitter
+Release	pulse.C	/^   void Release(const std::string& parname) {$/;"	f	class:FitBoard
+Release	pulse.C	/^   void Release(const std::string& parname) {$/;"	f	class:Fitter
+ReleaseAll	laserfit.C	/^   void ReleaseAll()$/;"	f	class:Fitter
+ReleaseAll	pulse.C	/^   void ReleaseAll()$/;"	f	class:Fitter
+SaveFileDialog	dialogs.C	/^const char *SaveFileDialog()$/;"	f
+SaveInit	pulse.C	/^   void SaveInit() {$/;"	f	class:FitBoard
+SaveInit	pulse.C	/^   void SaveInit() {$/;"	f	class:Fitter
+Second	pulsetree.C	/^   UInt_t Second() const {return oscRecord.event.time.second;}$/;"	f	class:OscBin
+Select	mkplain/MkProPlain.C	/^Int_t MkPro::Select(const char* outfile, Int_t num, Int_t first)$/;"	f	class:MkPro
+Select	mkplain/MkProPlain.C	/^Int_t TMBRoot::Select(const char* outfile, Int_t num, Int_t first) {cout<< "outfile=" << outfile << " num=" << num << " first=" << first <<endl; return 0;}$/;"	f	class:TMBRoot
+Set	laserfit.C	/^   void Set(Int_t chan, const std::string& parname, Double_t parvalue, Bool_t fix=0) {$/;"	f	class:FitBoard
+Set	laserfit.C	/^   void Set(const std::string& parname, Double_t parvalue, Bool_t fix=0) {$/;"	f	class:Fit
+Set	laserfit.C	/^   void Set(const std::string& parname, Double_t parvalue, Bool_t fix=0) {$/;"	f	class:Fitter
+Set	pulse.C	/^   void Set(Int_t chan, const std::string& parname, Double_t parvalue, Bool_t fix=0) {$/;"	f	class:FitBoard
+Set	pulse.C	/^   void Set(const std::string& parname, Double_t parvalue, Bool_t fix=0) {$/;"	f	class:Fitter
+SetEventPointer	pulsetree.C	/^   bool SetEventPointer(Int_t record)$/;"	f	class:OscBin
+SetInit	pulse.C	/^   void SetInit(Int_t chan, const std::string& parname, Double_t parvalue, Bool_t fix=0) {$/;"	f	class:FitBoard
+SetInit	pulse.C	/^   void SetInit(const std::string& parname, Double_t parvalue, Bool_t fix=0) {$/;"	f	class:Fitter
+SetLineColor	pulse.C	/^   void SetLineColor(Int_t chan, Int_t color) {$/;"	f	class:FitBoard
+SetLineColor	pulse.C	/^   void SetLineColor(Int_t color) {$/;"	f	class:Fitter
+SetLineWidth	pulse.C	/^   void SetLineWidth(Int_t chan, Int_t lwidth) {$/;"	f	class:FitBoard
+SetLineWidth	pulse.C	/^   void SetLineWidth(Int_t lwidth) {$/;"	f	class:Fitter
+SetNpx	pulse.C	/^   void SetNpx(Int_t Npx) {$/;"	f	class:Fitter
+SetNpx	pulse.C	/^   void SetNpx(Int_t chan, Int_t Npx) {$/;"	f	class:FitBoard
+SetParameters	laserfit.C	/^   void SetParameters(Double_t* par) {$/;"	f	class:PulseParameters
+SetParameters	pulse.C	/^   void SetParameters(Double_t* par) {$/;"	f	class:PulseParameters
+Set_A	current/pulse.C	/^   void Set_A(Double_t A) {par_[ipar_A] = A_ = A;}$/;"	f	class:PulseFunction
+Set_T	current/pulse.C	/^   void Set_T(Double_t T) {par_[ipar_T] = T_ = T;}$/;"	f	class:PulseFunction
+Set_sigma	current/pulse.C	/^   void Set_sigma(Double_t sigma) {par_[ipar_sigma] = sigma_ = sigma;}$/;"	f	class:PulseFunction
+Set_tau1	current/pulse.C	/^   void Set_tau1(Double_t tau1) {par_[ipar_tau1] = tau1_ = tau1;}$/;"	f	class:PulseFunction
+Set_tau2	current/pulse.C	/^   void Set_tau2(Double_t tau2) {par_[ipar_tau2] = tau2_ = tau2;}$/;"	f	class:PulseFunction
+Set_x0	current/pulse.C	/^   void Set_x0(Double_t x0) {par_[ipar_x0] = x0_ = x0;}$/;"	f	class:PulseFunction
+T	current/pulse.C	/^   Float_t T[8];$/;"	m	class:OscFit	file:
+T	current/pulsemax.C	/^   Float_t T[8];$/;"	m	class:OscFit	file:
+T	laserfit.C	/^   Double_t T;$/;"	m	class:PulseParameters	file:
+T	laserfit.C	/^   Float_t T[8];$/;"	m	class:OscFit	file:
+T	point-debugfit.C	/^   Float_t T[8];$/;"	m	class:OscFit	file:
+T	point.C	/^   Float_t T[8];$/;"	m	class:OscFit	file:
+T	pulse.C	/^   Double_t T;$/;"	m	class:PulseParameters	file:
+T	pulse.C	/^   Float_t T[8];$/;"	m	class:OscFit	file:
+T_	current/pulse.C	/^   Double_t A_, x0_, tau1_, tau2_, T_, sigma_;$/;"	m	class:PulseFunction	file:
+Time	pulsetree.C	/^   const Float_t* Time() const {return oscRecord.event.time.b1_t;}$/;"	f	class:OscBin
+Tree	arrtree.C	/^namespace Tree$/;"	n	file:
+Tree	arrtree_array.C	/^namespace Tree$/;"	n	file:
+Tree	arrtree_simple.C	/^namespace Tree$/;"	n	file:
+Tree	mkplain/MkProPlain.C	/^namespace Tree$/;"	n	file:
+Tree	runtree/runtree.C	/^namespace Tree$/;"	n	file:
+Tree	sp.C	/^namespace Tree$/;"	n	file:
+Tree	sp3.C	/^namespace Tree$/;"	n	file:
+Tree	sp3/sp3.C	/^namespace Tree$/;"	n	file:
+Tree	tree_array.C	/^namespace Tree$/;"	n	file:
+Tree	tree_example.C	/^namespace Tree$/;"	n	file:
+Tree	tree_iarray.C	/^namespace Tree$/;"	n	file:
+UsedChan	point.C	/^   void UsedChan() const {$/;"	f	struct:PulseBuffer
+UsedChan	pulsetree.C	/^   const Int_t* UsedChan() const {return usedchan;}$/;"	f	class:OscBin
+UsedChan	pulsetree.C	/^   void UsedChan() const {$/;"	f	struct:PulseBuffer
+Voltage	pulsetree.C	/^   const UShort_t* Voltage(Int_t ich) const {$/;"	f	class:OscBin
+Year	pulsetree.C	/^   UInt_t Year() const {return oscRecord.event.time.year;}$/;"	f	class:OscBin
+a	ClassDef_b.C	/^   int a;$/;"	m	class:BadClass	file:
+a	arrtree_simple.C	/^Float_t  a[3];$/;"	m	namespace:Tree	file:
+a	tree_example.C	/^   Float_t  a;$/;"	m	namespace:Tree	file:
+a1	runtree/runtree.C	/^   Int_t a1;$/;"	m	namespace:Tree	file:
+a1	sp.C	/^   Int_t a1;$/;"	m	namespace:Tree	file:
+a1	sp3.C	/^   Int_t a1;$/;"	m	namespace:Tree	file:
+a1	sp3/sp3.C	/^   Int_t a1;$/;"	m	namespace:Tree	file:
+a2	runtree/runtree.C	/^   Int_t a2;$/;"	m	namespace:Tree	file:
+a2	sp.C	/^   Int_t a2;$/;"	m	namespace:Tree	file:
+a2	sp3.C	/^   Int_t a2;$/;"	m	namespace:Tree	file:
+a2	sp3/sp3.C	/^   Int_t a2;$/;"	m	namespace:Tree	file:
+a3	runtree/runtree.C	/^   Int_t a3;$/;"	m	namespace:Tree	file:
+a3	sp.C	/^   Int_t a3;$/;"	m	namespace:Tree	file:
+a3	sp3.C	/^   Int_t a3;$/;"	m	namespace:Tree	file:
+a3	sp3/sp3.C	/^   Int_t a3;$/;"	m	namespace:Tree	file:
+adc	current/pulse.C	/^   Float_t adc[8];$/;"	m	class:OscFit	file:
+adc	current/pulsemax.C	/^   Float_t adc[8];$/;"	m	class:OscFit	file:
+adc	laserfit.C	/^   Float_t adc[8];$/;"	m	class:OscFit	file:
+adc	point-debugfit.C	/^   Float_t adc[8];$/;"	m	class:OscFit	file:
+adc	point.C	/^   Float_t adc[8];$/;"	m	class:OscFit	file:
+adc	pulse.C	/^   Float_t adc[8];$/;"	m	class:OscFit	file:
+adcf	current/pulse.C	/^   Float_t adcf[8];        \/\/ ADC from fit$/;"	m	class:OscFit	file:
+adcf	current/pulsemax.C	/^   Float_t adcf[8];        \/\/ ADC from fit$/;"	m	class:OscFit	file:
+adcf	laserfit.C	/^   Float_t adcf[8];        \/\/ ADC from fit$/;"	m	class:OscFit	file:
+adcf	point-debugfit.C	/^   Float_t adcf[8];        \/\/ ADC from fit$/;"	m	class:OscFit	file:
+adcf	point.C	/^   Float_t adcf[8];        \/\/ ADC from fit$/;"	m	class:OscFit	file:
+adcf	pulse.C	/^   Float_t adcf[8];        \/\/ ADC from fit$/;"	m	class:OscFit	file:
+addrun	runtree/runtree.C	/^void addrun(TTree* tree, const std::string& ifname)$/;"	f
+addtit	utils.C	/^const char* addtit(const char* title, TCanvas* can)$/;"	f
+allstrips	striptree.C	/^void allstrips()$/;"	f
+ampl	sp.C	/^void ampl(TTree* tree, bool fit)$/;"	f
+ampl	sp3.C	/^void ampl()$/;"	f
+ampl_tree	sp.C	/^TTree* ampl_tree(TTree* tree, const char* a1, const char* a2, TCut cut_a1, TCut cut_a2)$/;"	f
+arrtree	arrtree.C	/^TTree* arrtree(const char* ifname="run_158.erik", const char* ofname="")$/;"	f
+arrtree_array	arrtree_array.C	/^TTree* arrtree_array(const char* ifname="run_158.erik", const char* ofname="")$/;"	f
+arrtree_simple	arrtree_simple.C	/^void arrtree_simple()$/;"	f
+axisNdivisions	utils.C	/^void axisNdivisions(Int_t Ndivisions) {$/;"	f
+axis_invert	axis_invert.C	/^void axis_invert()$/;"	f
+b	ClassDef_b.C	/^   Float_t b;$/;"	m	class:class_with_b	file:
+b1_c1	point.C	/^   Float_t b1_c1[1024];$/;"	m	struct:PulseBuffer	file:
+b1_c1	pulsetree.C	/^   Float_t b1_c1[1024];$/;"	m	struct:PulseBuffer	file:
+b1_c2	point.C	/^   Float_t b1_c2[1024];$/;"	m	struct:PulseBuffer	file:
+b1_c2	pulsetree.C	/^   Float_t b1_c2[1024];$/;"	m	struct:PulseBuffer	file:
+b1_c3	point.C	/^   Float_t b1_c3[1024];$/;"	m	struct:PulseBuffer	file:
+b1_c3	pulsetree.C	/^   Float_t b1_c3[1024];$/;"	m	struct:PulseBuffer	file:
+b1_c4	point.C	/^   Float_t b1_c4[1024];$/;"	m	struct:PulseBuffer	file:
+b1_c4	pulsetree.C	/^   Float_t b1_c4[1024];$/;"	m	struct:PulseBuffer	file:
+b1_t	point.C	/^   Float_t b1_t[1024];$/;"	m	struct:PulseBuffer	file:
+b1_t	pulsetree.C	/^   Float_t b1_t[1024];$/;"	m	struct:OscTime	file:
+b1_t	pulsetree.C	/^   Float_t b1_t[1024];$/;"	m	struct:PulseBuffer	file:
+b2_c1	point.C	/^   Float_t b2_c1[1024];$/;"	m	struct:PulseBuffer	file:
+b2_c1	pulsetree.C	/^   Float_t b2_c1[1024];$/;"	m	struct:PulseBuffer	file:
+b2_c2	point.C	/^   Float_t b2_c2[1024];$/;"	m	struct:PulseBuffer	file:
+b2_c2	pulsetree.C	/^   Float_t b2_c2[1024];$/;"	m	struct:PulseBuffer	file:
+b2_c3	point.C	/^   Float_t b2_c3[1024];$/;"	m	struct:PulseBuffer	file:
+b2_c3	pulsetree.C	/^   Float_t b2_c3[1024];$/;"	m	struct:PulseBuffer	file:
+b2_c4	point.C	/^   Float_t b2_c4[1024];$/;"	m	struct:PulseBuffer	file:
+b2_c4	pulsetree.C	/^   Float_t b2_c4[1024];$/;"	m	struct:PulseBuffer	file:
+b2_t	point.C	/^   Float_t b2_t[1024];$/;"	m	struct:PulseBuffer	file:
+b2_t	pulsetree.C	/^   Float_t b2_t[1024];$/;"	m	struct:PulseBuffer	file:
+b_b1_c1	point.C	/^   TBranch* b_b1_c1;$/;"	m	struct:PulseBuffer	file:
+b_b1_c1	pulsetree.C	/^   TBranch* b_b1_c1;$/;"	m	struct:PulseBuffer	file:
+b_b1_c2	point.C	/^   TBranch* b_b1_c2;$/;"	m	struct:PulseBuffer	file:
+b_b1_c2	pulsetree.C	/^   TBranch* b_b1_c2;$/;"	m	struct:PulseBuffer	file:
+b_b1_c3	point.C	/^   TBranch* b_b1_c3;$/;"	m	struct:PulseBuffer	file:
+b_b1_c3	pulsetree.C	/^   TBranch* b_b1_c3;$/;"	m	struct:PulseBuffer	file:
+b_b1_c4	point.C	/^   TBranch* b_b1_c4;$/;"	m	struct:PulseBuffer	file:
+b_b1_c4	pulsetree.C	/^   TBranch* b_b1_c4;$/;"	m	struct:PulseBuffer	file:
+b_b1_t	point.C	/^   TBranch* b_b1_t;$/;"	m	struct:PulseBuffer	file:
+b_b1_t	pulsetree.C	/^   TBranch* b_b1_t;$/;"	m	struct:PulseBuffer	file:
+b_b2_c1	point.C	/^   TBranch* b_b2_c1;$/;"	m	struct:PulseBuffer	file:
+b_b2_c1	pulsetree.C	/^   TBranch* b_b2_c1;$/;"	m	struct:PulseBuffer	file:
+b_b2_c2	point.C	/^   TBranch* b_b2_c2;$/;"	m	struct:PulseBuffer	file:
+b_b2_c2	pulsetree.C	/^   TBranch* b_b2_c2;$/;"	m	struct:PulseBuffer	file:
+b_b2_c3	point.C	/^   TBranch* b_b2_c3;$/;"	m	struct:PulseBuffer	file:
+b_b2_c3	pulsetree.C	/^   TBranch* b_b2_c3;$/;"	m	struct:PulseBuffer	file:
+b_b2_c4	point.C	/^   TBranch* b_b2_c4;$/;"	m	struct:PulseBuffer	file:
+b_b2_c4	pulsetree.C	/^   TBranch* b_b2_c4;$/;"	m	struct:PulseBuffer	file:
+b_b2_t	point.C	/^   TBranch* b_b2_t;$/;"	m	struct:PulseBuffer	file:
+b_b2_t	pulsetree.C	/^   TBranch* b_b2_t;$/;"	m	struct:PulseBuffer	file:
+b_day	point.C	/^   TBranch* b_day;$/;"	m	struct:PulseBuffer	file:
+b_day	pulsetree.C	/^   TBranch* b_day;$/;"	m	struct:PulseBuffer	file:
+b_event	point.C	/^   TBranch* b_event;$/;"	m	struct:PulseBuffer	file:
+b_event	pulsetree.C	/^   TBranch* b_event;$/;"	m	struct:PulseBuffer	file:
+b_hour	point.C	/^   TBranch* b_hour;$/;"	m	struct:PulseBuffer	file:
+b_hour	pulsetree.C	/^   TBranch* b_hour;$/;"	m	struct:PulseBuffer	file:
+b_millisecond	point.C	/^   TBranch* b_millisecond;$/;"	m	struct:PulseBuffer	file:
+b_millisecond	pulsetree.C	/^   TBranch* b_millisecond;$/;"	m	struct:PulseBuffer	file:
+b_minute	point.C	/^   TBranch* b_minute;$/;"	m	struct:PulseBuffer	file:
+b_minute	pulsetree.C	/^   TBranch* b_minute;$/;"	m	struct:PulseBuffer	file:
+b_month	point.C	/^   TBranch* b_month;$/;"	m	struct:PulseBuffer	file:
+b_month	pulsetree.C	/^   TBranch* b_month;$/;"	m	struct:PulseBuffer	file:
+b_second	point.C	/^   TBranch* b_second;$/;"	m	struct:PulseBuffer	file:
+b_second	pulsetree.C	/^   TBranch* b_second;$/;"	m	struct:PulseBuffer	file:
+b_tc1	point.C	/^   TBranch* b_tc1;              \/\/ not in use, for compatibility with pulse tree only$/;"	m	struct:PulseBuffer	file:
+b_tc1	pulsetree.C	/^   TBranch* b_tc1;              \/\/ not in use, for compatibility with pulse tree only$/;"	m	struct:PulseBuffer	file:
+b_tc2	point.C	/^   TBranch* b_tc2;              \/\/ not in use, for compatibility with pulse tree only$/;"	m	struct:PulseBuffer	file:
+b_tc2	pulsetree.C	/^   TBranch* b_tc2;              \/\/ not in use, for compatibility with pulse tree only$/;"	m	struct:PulseBuffer	file:
+b_usedchan	point.C	/^   TBranch* b_usedchan;$/;"	m	struct:PulseBuffer	file:
+b_usedchan	pulsetree.C	/^   TBranch* b_usedchan;$/;"	m	struct:PulseBuffer	file:
+b_year	point.C	/^   TBranch* b_year;$/;"	m	struct:PulseBuffer	file:
+b_year	pulsetree.C	/^   TBranch* b_year;$/;"	m	struct:PulseBuffer	file:
+baddr	point.C	/^   std::map<TBranch*, void*> baddr;$/;"	m	struct:PulseBuffer	file:
+baddr	pulsetree.C	/^   std::map<TBranch*, void*> baddr;$/;"	m	struct:PulseBuffer	file:
+beamfit	pulse.C	/^void beamfit()$/;"	f
+bkg	current/pulse.C	/^   Float_t bkg[8];         \/\/ flat background before the signal$/;"	m	class:OscFit	file:
+bkg	current/pulsemax.C	/^   Float_t bkg[8];         \/\/ flat background before the signal$/;"	m	class:OscFit	file:
+bkg	laserfit.C	/^   Float_t bkg[8];         \/\/ flat background before the signal$/;"	m	class:OscFit	file:
+bkg	point-debugfit.C	/^   Float_t bkg[8];         \/\/ flat background before the signal$/;"	m	class:OscFit	file:
+bkg	point.C	/^   Float_t bkg[8];         \/\/ flat background before the signal$/;"	m	class:OscFit	file:
+bkg	pulse.C	/^   Float_t bkg[8];         \/\/ flat background before the signal$/;"	m	class:OscFit	file:
+book	arrtree.C	/^   void book(TTree* tree, Int_t nbra=1) {$/;"	f	namespace:Tree
+book	arrtree.C	/^   void book(TTree* tree, const char* bnames="v") {$/;"	f	namespace:Tree
+book	arrtree_array.C	/^   void book(TTree* tree) {$/;"	f	namespace:Tree
+book	arrtree_simple.C	/^void book(TTree* tree) {$/;"	f	namespace:Tree
+book	mkplain/MkProPlain.C	/^   void book(TTree* tree) {$/;"	f	namespace:Tree
+book	runtree/runtree.C	/^   void book(TTree* tree) {$/;"	f	namespace:Tree
+book	sp.C	/^   void book(TTree* tree, Int_t nchan=0) {$/;"	f	namespace:Tree
+book	sp3.C	/^   void book(TTree* tree) {$/;"	f	namespace:Tree
+book	sp3/sp3.C	/^   void book(TTree* tree) {$/;"	f	namespace:Tree
+book	tree_array.C	/^   void book(TTree* tree, Int_t nbra=1, char type='F') {$/;"	f	namespace:Tree
+book	tree_array.C	/^   void book(TTree* tree, std::string bnames="v", char type='F') {$/;"	f	namespace:Tree
+book	tree_example.C	/^   void book(TTree* tree) {$/;"	f	namespace:Tree
+book	tree_iarray.C	/^   void book(TTree* tree, Int_t nbra=1, char type='I') {$/;"	f	namespace:Tree
+book	tree_iarray.C	/^   void book(TTree* tree, std::string bnames="v", char type='I') {$/;"	f	namespace:Tree
+bp	classtree.C	/^   Int_t    bp[8];      \/\/ blade\/panel for rtd$/;"	m	class:Disk	file:
+bp	classtree/classtree.h	/^   Int_t    bp[8];      \/\/ blade\/panel for rtd$/;"	m	class:Disk
+bra	utils.C	/^void bra(TTree* tree, const char* pattern)$/;"	f
+buf	pulsetree.C	/^   static PulseBuffer buf;$/;"	m	class:Osc	file:
+buf	pulsetree.C	/^PulseBuffer Osc::buf;$/;"	m	class:Osc	file:
+buffer	pulsetree.C	/^   Char_t buffer[sizeof(OscEvent)];$/;"	m	union:OscRecord	file:
+cd	utils.C	/^TFile* cd(Int_t fnumber)$/;"	f
+cd	utils.C	/^TFile* cd(const char* filename)$/;"	f
+ch	drs.C	/^      Int_t ch;$/;"	m	class:OscChannel	file:
+ch	osc.C	/^      Int_t ch;$/;"	m	class:OscChannel	file:
+ch	point.C	/^      Int_t ch;$/;"	m	class:OscChannel	file:
+channel	pulsetree.C	/^   OscChannel channel[4];$/;"	m	struct:OscEvent	file:
+chi2	current/pulse.C	/^   Float_t chi2[8];$/;"	m	class:OscFit	file:
+chi2	current/pulsemax.C	/^   Float_t chi2[8];$/;"	m	class:OscFit	file:
+chi2	laserfit.C	/^   Float_t chi2[8];$/;"	m	class:OscFit	file:
+chi2	point-debugfit.C	/^   Float_t chi2[8];$/;"	m	class:OscFit	file:
+chi2	point.C	/^   Float_t chi2[8];$/;"	m	class:OscFit	file:
+chi2	pulse.C	/^   Float_t chi2[8];$/;"	m	class:OscFit	file:
+chi2_	laserfit.C	/^   Double_t chi2_;$/;"	m	class:Fitter	file:
+chi2_	pulse.C	/^   Double_t chi2_;$/;"	m	class:Fitter	file:
+chi2line	current/pulsemax.C	/^   Float_t chi2line[8];    \/\/ chi2 of line fit$/;"	m	class:OscFit	file:
+chi2line	laserfit.C	/^   Float_t chi2line[8];    \/\/ chi2 of line fit$/;"	m	class:OscFit	file:
+chi2line	point-debugfit.C	/^   Float_t chi2line[8];    \/\/ chi2 of line fit$/;"	m	class:OscFit	file:
+chi2line	point.C	/^   Float_t chi2line[8];    \/\/ chi2 of line fit$/;"	m	class:OscFit	file:
+chi2line	pulse.C	/^   Float_t chi2line[8];    \/\/ chi2 of line fit$/;"	m	class:OscFit	file:
+chlist	utils.C	/^TChain* chlist(const char* tree_name, const char* filelist) {$/;"	f
+class_with_b	ClassDef_b.C	/^class class_with_b: public TObject {$/;"	c	file:
+classtree	classtree.C	/^void classtree()$/;"	f
+classtree	classtree/classtree.C	/^void classtree()$/;"	f
+classtree_h	classtree/classtree.h	5;"	d
+clear	arrtree.C	/^   void clear() {$/;"	f	namespace:Tree
+clear	arrtree_array.C	/^   void clear()$/;"	f	namespace:Tree
+clear	arrtree_simple.C	/^void clear()$/;"	f	namespace:Tree
+clear	classtree.C	/^   void clear() {$/;"	f	class:Disk
+clear	classtree.C	/^   void clear() {$/;"	f	class:HCyl
+clear	classtree/classtree.h	/^   void clear() {$/;"	f	class:Disk
+clear	classtree/classtree.h	/^   void clear() {$/;"	f	class:HCyl
+clear	current/pulse.C	/^   void clear() {$/;"	f	class:OscFit
+clear	current/pulsemax.C	/^   void clear() {$/;"	f	class:OscFit
+clear	drs.C	/^      void clear() {$/;"	f	class:OscChannel
+clear	drs.C	/^      void clear() {$/;"	f	class:OscEvent
+clear	laserfit.C	/^   void clear() {$/;"	f	class:Fit
+clear	laserfit.C	/^   void clear() {$/;"	f	class:Fitter
+clear	laserfit.C	/^   void clear() {$/;"	f	class:OscFit
+clear	laserfit.C	/^   void clear() {A=x0=tau1=tau2=T=sigma=0;}$/;"	f	class:PulseParameters
+clear	mkplain/MkProPlain.C	/^   void clear()$/;"	f	namespace:Tree
+clear	osc.C	/^      void clear() {$/;"	f	class:OscChannel
+clear	osc.C	/^      void clear() {$/;"	f	class:OscEvent
+clear	point-debugfit.C	/^   void clear() {$/;"	f	class:OscFit
+clear	point.C	/^      void clear() {$/;"	f	class:OscChannel
+clear	point.C	/^      void clear() {$/;"	f	class:OscEvent
+clear	point.C	/^   void clear() {$/;"	f	class:OscFit
+clear	point.C	/^   void clear() {$/;"	f	struct:PulseBuffer
+clear	pulse.C	/^   void clear() {$/;"	f	class:Fitter
+clear	pulse.C	/^   void clear() {$/;"	f	class:OscFit
+clear	pulse.C	/^   void clear() {A=x0=tau1=tau2=T=sigma=0;}$/;"	f	class:PulseParameters
+clear	pulsetree.C	/^   void clear() {$/;"	f	struct:PulseBuffer
+clear	runtree/runtree.C	/^   void clear()$/;"	f	namespace:Tree
+clear	sp.C	/^   void clear()$/;"	f	namespace:Tree
+clear	sp3.C	/^   void clear()$/;"	f	namespace:Tree
+clear	sp3/sp3.C	/^   void clear()$/;"	f	namespace:Tree
+clear	tree_array.C	/^   void clear() {$/;"	f	namespace:Tree
+clear	tree_example.C	/^   void clear()$/;"	f	namespace:Tree
+clear	tree_iarray.C	/^   void clear() {$/;"	f	namespace:Tree
+color_	current/pulse.C	/^   Int_t color_;$/;"	m	class:PulseFunction	file:
+color_	pulse.C	/^   Int_t color_;$/;"	m	class:Fitter	file:
+colors	utils.C	/^void colors()$/;"	f
+connect	arrtree.C	/^   void connect(TTree* tree) {   $/;"	f	namespace:Tree
+connect	arrtree_array.C	/^   void connect(TTree* tree)$/;"	f	namespace:Tree
+connect	arrtree_simple.C	/^void connect(TTree* tree)                                \/\/ need for event-by-event analysis$/;"	f	namespace:Tree
+connect	mkplain/MkProPlain.C	/^   void connect(TTree* tree)                                \/\/ need for event-by-event analysis$/;"	f	namespace:Tree
+connect	runtree/runtree.C	/^   void connect(TTree* tree)                                \/\/ need for event-by-event analysis$/;"	f	namespace:Tree
+connect	sp.C	/^   void connect(TTree* tree, Int_t nchan=0)$/;"	f	namespace:Tree
+connect	sp3.C	/^   void connect(TTree* tree)                                \/\/ need for event-by-event analysis$/;"	f	namespace:Tree
+connect	sp3/sp3.C	/^   void connect(TTree* tree)                                \/\/ need for event-by-event analysis$/;"	f	namespace:Tree
+connect	tree_array.C	/^   void connect(TTree* tree) {   $/;"	f	namespace:Tree
+connect	tree_example.C	/^   void connect(TTree* tree)                                \/\/ need for event-by-event analysis$/;"	f	namespace:Tree
+connect	tree_iarray.C	/^   void connect(TTree* tree) {   $/;"	f	namespace:Tree
+convert	striptree.C	/^void convert()$/;"	f
+corr	correlation.C	/^TGraph* corr(Float_t gsig=10)$/;"	f
+correlation	correlation.C	/^Double_t correlation(Int_t np, Double_t u[], Double_t v[])$/;"	f
+createFunction	current/pulse.C	/^   void createFunction() {$/;"	f	class:PulseFunction
+ct	utils.C	/^void ct()$/;"	f
+ctadd	utils.C	/^void ctadd()$/;"	f
+ctlist	utils.C	/^void ctlist()$/;"	f
+d	classtree.C	/^   Int_t    d[2];       \/\/ disk #$/;"	m	class:HCyl	file:
+d	classtree/classtree.h	/^   Int_t    d[2];       \/\/ disk #$/;"	m	class:HCyl
+d	current/pulse.C	/^   Float_t d[8];$/;"	m	class:OscFit	file:
+d	current/pulsemax.C	/^   Float_t d[8];$/;"	m	class:OscFit	file:
+d	laserfit.C	/^   Float_t d[8];$/;"	m	class:OscFit	file:
+d	point-debugfit.C	/^   Float_t d[8];$/;"	m	class:OscFit	file:
+d	point.C	/^   Float_t d[8];$/;"	m	class:OscFit	file:
+d	pulse.C	/^   Float_t d[8];$/;"	m	class:OscFit	file:
+day	point.C	/^   Int_t day;$/;"	m	struct:PulseBuffer	file:
+day	pulsetree.C	/^   Int_t day;$/;"	m	struct:PulseBuffer	file:
+day	pulsetree.C	/^   UShort_t day;$/;"	m	struct:OscTime	file:
+debug	current/pulse.C	/^bool debug = false;$/;"	v
+debug	current/pulsemax.C	/^bool debug = false;$/;"	v
+debug	laserfit.C	/^bool debug = false;$/;"	v
+debug	point-debugfit.C	/^bool debug = false;$/;"	v
+debug	point.C	/^bool debug = false;$/;"	v
+debug	pulse.C	/^bool debug = false;$/;"	v
+defaultClone_	laserfit.C	/^   Bool_t defaultClone_;          \/\/ required to be set before setting up of some particular channel$/;"	m	class:FitBoard	file:
+defaultClone_	pulse.C	/^   Bool_t defaultClone_;          \/\/ required to be set before setting up of some particular channel$/;"	m	class:FitBoard	file:
+defaultComplete_	laserfit.C	/^   Bool_t defaultComplete_;$/;"	m	class:FitBoard	file:
+defaultComplete_	pulse.C	/^   Bool_t defaultComplete_;$/;"	m	class:FitBoard	file:
+defaultLock_	laserfit.C	/^   Bool_t defaultLock_;$/;"	m	class:FitBoard	file:
+defaultLock_	pulse.C	/^   Bool_t defaultLock_;$/;"	m	class:FitBoard	file:
+derfun	utils.C	/^TF1* derfun(TF1* fun) {$/;"	f
+disk	classtree.C	/^   Disk     disk[2];    \/\/$/;"	m	class:HCyl	file:
+disk	classtree/classtree.h	/^   Disk     disk[2];    \/\/$/;"	m	class:HCyl
+dline	current/pulsemax.C	/^   Float_t dline[8];       \/\/ intersection of the fitted line with y-axis$/;"	m	class:OscFit	file:
+dline	laserfit.C	/^   Float_t dline[8];       \/\/ intersection of the fitted line with y-axis$/;"	m	class:OscFit	file:
+dline	point-debugfit.C	/^   Float_t dline[8];       \/\/ intersection of the fitted line with y-axis$/;"	m	class:OscFit	file:
+dline	point.C	/^   Float_t dline[8];       \/\/ intersection of the fitted line with y-axis$/;"	m	class:OscFit	file:
+dline	pulse.C	/^   Float_t dline[8];       \/\/ intersection of the fitted line with y-axis$/;"	m	class:OscFit	file:
+dok	point-debugfit.C	/^   Bool_t dok[8];$/;"	m	class:OscFit	file:
+dok	point.C	/^   Bool_t dok[8];$/;"	m	class:OscFit	file:
+dphi_jet01	mkplain/MkProPlain.C	/^   Float_t  dphi_jet01;          \/\/ azimuthal angle between two leading jets, cut < 2.88$/;"	m	namespace:Tree	file:
+drawpan	utils.C	/^void drawpan(TH1* h) {$/;"	f
+drs	drs.C	/^TTree* drs(const char* ifname="sipm_25pe.xml", Int_t events=0)$/;"	f
+dummy	ClassDef_b.C	/^   int dummy;$/;"	m	class:BadClass	file:
+dydx	laserfit.C	/^   Float_t dydx[8];        \/\/ derivative$/;"	m	class:OscFit	file:
+dydx	point-debugfit.C	/^   Float_t dydx[8];        \/\/ derivative$/;"	m	class:OscFit	file:
+dydx	point.C	/^   Float_t dydx[8];        \/\/ derivative$/;"	m	class:OscFit	file:
+dydx	pulse.C	/^   Float_t dydx[8];        \/\/ derivative$/;"	m	class:OscFit	file:
+eloop	eloop.C	/^void eloop(TCut cut="", Int_t evtNo=0, Int_t ch1=-1, Int_t ch2=-1, Int_t ch3=-1, Int_t ch4=-1, Int_t ch5=-1, Int_t ch6=-1, Int_t ch7=-1, Int_t ch8=-1)$/;"	f
+eloop4	eloop.C	/^void eloop4(TCut cut="", Int_t evtNo=0)$/;"	f
+em_dR	mkplain/MkProPlain.C	/^   Float_t  em_dR[100];$/;"	m	namespace:Tree	file:
+em_dphi_met	mkplain/MkProPlain.C	/^   Float_t  em_dphi_met[100];$/;"	m	namespace:Tree	file:
+em_eta	mkplain/MkProPlain.C	/^   Float_t  em_eta[100];$/;"	m	namespace:Tree	file:
+em_mt	mkplain/MkProPlain.C	/^   Float_t  em_mt[100];$/;"	m	namespace:Tree	file:
+em_phi	mkplain/MkProPlain.C	/^   Float_t  em_phi[100];$/;"	m	namespace:Tree	file:
+em_pt	mkplain/MkProPlain.C	/^   Float_t  em_pt[100];$/;"	m	namespace:Tree	file:
+endn	point.C	/^std::ostream& endn(std::ostream& os)$/;"	f
+endn	utils.C	/^std::ostream& endn(std::ostream& os)$/;"	f
+entry	entry.C	/^TMultiGraph *entry(const char *y_vs_x="help", TCut case1="", TCut case2="", TCut common="", Int_t entryNo=0$/;"	f
+epar_	laserfit.C	/^   Double_t epar_[10];$/;"	m	class:Fitter	file:
+epar_	pulse.C	/^   Double_t epar_[10];$/;"	m	class:Fitter	file:
+eps	utils.C	/^void eps(TString pathname, TString suffix)$/;"	f
+erfc_	current/pulse.C	/^   static Double_t erfc_(Double_t x) {$/;"	f	class:MathLim
+event	point.C	/^   Int_t event;$/;"	m	struct:PulseBuffer	file:
+event	pulsetree.C	/^   Int_t event;$/;"	m	struct:PulseBuffer	file:
+event	pulsetree.C	/^   OscEvent event;$/;"	m	union:OscRecord	file:
+eventsum	eventsum.C	/^void eventsum()$/;"	f
+evt	current/pulse.C	/^   Int_t evt;$/;"	m	class:OscFit	file:
+evt	current/pulsemax.C	/^   Int_t evt;$/;"	m	class:OscFit	file:
+evt	drs.C	/^      Int_t evt;$/;"	m	class:OscEvent	file:
+evt	eloop.C	/^void evt(TCut cut="", Int_t evtNo=0, Int_t ch1=-1, Int_t ch2=-1, Int_t ch3=-1, Int_t ch4=-1, Int_t ch5=-1, Int_t ch6=-1, Int_t ch7=-1, Int_t ch8=-1)$/;"	f
+evt	evt.C	/^TMultiGraph* evt(Int_t ch1=-1, Int_t ch2=-1, TCut cut="", Int_t evtNo=0)$/;"	f
+evt	evt0.C	/^TMultiGraph* evt(Int_t ch1=-1, Int_t ch2=-1, TCut cut="", Int_t evtNo=1)$/;"	f
+evt	laserfit.C	/^   Int_t evt;$/;"	m	class:OscFit	file:
+evt	osc.C	/^      Int_t evt;$/;"	m	class:OscEvent	file:
+evt	point-debugfit.C	/^   Int_t evt;$/;"	m	class:OscFit	file:
+evt	point.C	/^      Int_t evt;$/;"	m	class:OscEvent	file:
+evt	point.C	/^   Int_t evt;$/;"	m	class:OscFit	file:
+evt	pulse.C	/^   Int_t evt;$/;"	m	class:OscFit	file:
+evt	runtree/runtree.C	/^   Int_t evt;$/;"	m	namespace:Tree	file:
+evt	sp3/sp3.C	/^   Int_t evt;$/;"	m	namespace:Tree	file:
+evt4	eloop.C	/^void evt4(Int_t evtNo=0, TCut cut="", TCanvas* can=0)$/;"	f
+evt8	eloop.C	/^void evt8(Int_t evtNo=0, TCut cut="", TCanvas* can=0)$/;"	f
+evtloop	evt.C	/^void evtloop(Int_t ch1=-1, Int_t ch2=-1, TCut cut="", Int_t evtNo=0)$/;"	f
+evtloop	evt0.C	/^void evtloop(Int_t ch1=-1, Int_t ch2=-1, TCut cut="", Int_t evtNo=1)$/;"	f
+exitl	utils.C	/^std::ostream& exitl(std::ostream&) {$/;"	f
+exp_	current/pulse.C	/^   static Double_t exp_(Double_t x) {$/;"	f	class:MathLim
+fDialog	dialogs.C	/^   TGTransientFrame *fDialog;  \/\/ transient frame, main dialog window$/;"	m	class:InputDialog	file:
+fPsigma	current/pulse.C	/^   static Double_t fPsigma(Double_t* xx, Double_t* par)$/;"	f	class:PulseFunction
+fPsigma	current/pulse.C	/^Double_t fPsigma(Double_t* xx, Double_t* par)$/;"	f
+fPsigma	current/pulsemax.C	/^Double_t fPsigma(Double_t* xx, Double_t* par)$/;"	f
+fPsigma	laserfit.C	/^Double_t fPsigma(Double_t *xx, Double_t *par)$/;"	f
+fPsigma	point-debugfit.C	/^Double_t fPsigma(Double_t *xx, Double_t *par)$/;"	f
+fPsigma	point.C	/^Double_t fPsigma(Double_t *xx, Double_t *par)$/;"	f
+fPsigma	pulse.C	/^Double_t fPsigma(Double_t *xx, Double_t *par)$/;"	f
+fRetStr	dialogs.C	/^   char             *fRetStr;  \/\/ address to store return string$/;"	m	class:InputDialog	file:
+fTE	dialogs.C	/^   TGTextEntry      *fTE;      \/\/ text entry widget containing$/;"	m	class:InputDialog	file:
+fWidgets	dialogs.C	/^   TList            *fWidgets; \/\/ keep track of widgets to be deleted in dtor$/;"	m	class:InputDialog	file:
+fbkg	gaussbkg.C	/^Double_t fbkg(Double_t* xx, Double_t* par)$/;"	f
+ffit_	laserfit.C	/^   TF1* ffit_;$/;"	m	class:Fit	file:
+fgauss	gauss.C	/^Double_t fgauss(Double_t* x, Double_t* par)$/;"	f
+fgaussGSL	gauss.C	/^Double_t fgaussGSL(Double_t x, void* param)$/;"	f
+findtree	sp.C	/^TTree* findtree(const char* name, const char* title)$/;"	f
+findtree	sp3.C	/^TTree* findtree(const char* name="", const char* title="")$/;"	f
+fit_	laserfit.C	/^   Fitter* fit_[nchan_max_+1];      \/\/ max number of channels + default channel$/;"	m	class:FitBoard	file:
+fit_	pulse.C	/^   Fitter* fit_[nchan_max_+1];      \/\/ max number of channels + default channel$/;"	m	class:FitBoard	file:
+fitg	utils.C	/^void fitg(Double_t xmin, Double_t xmax, const char* opt, const char* gopt, TH1* h, TGraph* gr) {$/;"	f
+fitgaus	utils.C	/^void fitgaus(Double_t xmin, Double_t xmax, const char* opt, const char* gopt, TH1* h, TGraph* gr)$/;"	f
+fitgl	utils.C	/^void fitgl(Double_t xmin, Double_t xmax, const char* opt, const char* gopt, TH1* h, TGraph* gr) {$/;"	f
+fitgr	utils.C	/^void fitgr(Double_t xmin, Double_t xmax, const char* opt, const char* gopt, TH1* h, TGraph* gr) {$/;"	f
+fitp	utils.C	/^void fitp(Double_t xmin, Double_t xmax, Int_t power, const char* opt, const char* gopt, TH1* h, TGraph* gr) {$/;"	f
+fitpan	utils.C	/^void fitpan(TH1* h) {$/;"	f
+fitpol	utils.C	/^void fitpol(Double_t xmin, Double_t xmax, Int_t power, const char* opt, const char* gopt, TH1* h, TGraph* gr)$/;"	f
+fix_	laserfit.C	/^   std::vector<std::string> fix_;$/;"	m	class:Fit	file:
+fix_	laserfit.C	/^   std::vector<std::string> fix_;$/;"	m	class:Fitter	file:
+fix_	pulse.C	/^   std::vector<std::string> fix_;$/;"	m	class:Fitter	file:
+fline	current/pulsemax.C	/^Double_t fline(Double_t xx[], Double_t par[])$/;"	f
+fline	laserfit.C	/^Double_t fline(Double_t xx[], Double_t par[])$/;"	f
+fline	point-debugfit.C	/^Double_t fline(Double_t xx[], Double_t par[])$/;"	f
+fline	point.C	/^Double_t fline(Double_t xx[], Double_t par[])$/;"	f
+fline	pulse.C	/^Double_t fline(Double_t xx[], Double_t par[])$/;"	f
+fpulse	point-debugfit.C	/^TF1* fpulse(Double_t xmin, Double_t xmax$/;"	f
+fpulse	point.C	/^TF1* fpulse(Double_t xmin, Double_t xmax$/;"	f
+fpulse_	current/pulse.C	/^   TF1* fpulse_;$/;"	m	class:PulseFunction	file:
+fsig	gaussbkg.C	/^Double_t fsig(Double_t* xx, Double_t* par)$/;"	f
+fsigbkg	gaussbkg.C	/^Double_t fsigbkg(Double_t* xx, Double_t* par)$/;"	f
+ftemp	utils.C	/^TF1* ftemp(const char* name, const char* title)$/;"	f
+ftempClone	utils.C	/^TF1* ftempClone(const char* name, const char* title)$/;"	f
+ftplot	point.C	/^TGraphErrors* ftplot(Int_t evt, Int_t channel, TTree* tree_pulse=0, TTree* tree_ft=0, bool allchan=false, bool samecan=false)$/;"	f
+ftplot	point.C	/^void ftplot(TEventList* elist, Int_t channel, TTree* tree_pulse=0, TTree* tree_ft=0, bool allchan=false)$/;"	f
+fun	ClassDef_b.C	/^   void fun(int a) {dummy = a;}$/;"	f	class:BadClass
+fun	current/pulse.C	/^   TF1* fun() {return fpulse_;}$/;"	f	class:PulseFunction
+fwlite	utils.C	/^void fwlite() {$/;"	f
+gauss	gauss.C	/^void gauss()$/;"	f
+gaussbkg	gaussbkg.C	/^void gaussbkg()$/;"	f
+gdebug	current/pulse.C	/^bool gdebug = false;$/;"	v
+gdebug	current/pulsemax.C	/^bool gdebug = false;$/;"	v
+gdebug	laserfit.C	/^bool gdebug = false;$/;"	v
+gdebug	point-debugfit.C	/^bool gdebug = false;$/;"	v
+gdebug	point.C	/^bool gdebug = false;$/;"	v
+gdebug	pulse.C	/^bool gdebug = false;$/;"	v
+getemp	utils.C	/^TGraphErrors* getemp(const char* name, const char* title)$/;"	f
+getempClone	utils.C	/^TGraphErrors* getempClone(const char* name, const char* title)$/;"	f
+gri	utils.C	/^void gri() {$/;"	f
+grtemp	utils.C	/^TGraph* grtemp(const char* name, const char* title) {return gtemp(name,title);}$/;"	f
+grtempClone	utils.C	/^TGraph* grtempClone(const char* name, const char* title) {return gtempClone(name,title);}$/;"	f
+gsubf	utils.C	/^TGraphErrors* gsubf(const TGraph* gr, const TF1* f, const char* name, const char* title)$/;"	f
+gtemp	utils.C	/^TGraph* gtemp(const char* name, const char* title)$/;"	f
+gtempClone	utils.C	/^TGraph* gtempClone(const char* name, const char* title)$/;"	f
+hcolor	utils.C	/^void hcolor(TH1* h, Int_t color, Int_t fillstyle) {$/;"	f
+header	pulsetree.C	/^   Char_t header[4];$/;"	m	struct:OscChannel	file:
+header	pulsetree.C	/^   Char_t header[4];$/;"	m	struct:OscTime	file:
+hevt	point.C	/^TH1F* hevt(TTree* tree, Int_t chan, Int_t entry, Int_t nbkg_approx=20)$/;"	f
+hi	utils.C	/^void hi(Int_t nlines) {history(nlines);}$/;"	f
+hi	utils.C	/^void hi(const char* pattern, Int_t nlines) {history(pattern,nlines);}$/;"	f
+hiDraw	utils.C	/^void hiDraw(Int_t nlines) {historyDraw(nlines);}$/;"	f
+hiDraw	utils.C	/^void hiDraw(const char* pattern, Int_t nlines) {historyDraw(pattern,nlines);}$/;"	f
+hint	hint.C	/^Stat_t hint(TH1F* h, Float_t x1, Float_t x2)$/;"	f
+hint	hint.C	/^Stat_t hint(char* hname, Float_t x1, Float_t x2)$/;"	f
+hint	utils.C	/^Stat_t hint(TH1F* h, Float_t x1, Float_t x2)$/;"	f
+hint	utils.C	/^Stat_t hint(char* hname, Float_t x1, Float_t x2)$/;"	f
+history	utils.C	/^void history(Int_t nlines)$/;"	f
+history	utils.C	/^void history(const char* pattern, Int_t nlines)$/;"	f
+historyDraw	utils.C	/^void historyDraw(Int_t nlines)$/;"	f
+historyDraw	utils.C	/^void historyDraw(const char* pattern, Int_t nlines)$/;"	f
+hname	utils.C	/^TH1* hname(const char* name)$/;"	f
+hour	point.C	/^   Int_t hour;$/;"	m	struct:PulseBuffer	file:
+hour	pulsetree.C	/^   Int_t hour;$/;"	m	struct:PulseBuffer	file:
+hour	pulsetree.C	/^   UShort_t hour;$/;"	m	struct:OscTime	file:
+hprint	utils.C	/^void hprint(TH1* h)$/;"	f
+htemp	sp.C	/^TH1* htemp(const char* name, const char* title)$/;"	f
+htemp	sp3.C	/^TH1* htemp(const char* name, const char* title)$/;"	f
+htemp	utils.C	/^TH1* htemp(const char* name, const char* title)$/;"	f
+htemp2	utils.C	/^TH2* htemp2(const char* name, const char* title)$/;"	f
+htemp2Clone	utils.C	/^TH2* htemp2Clone(const char* name, const char* title)$/;"	f
+htempClone	utils.C	/^TH1* htempClone(const char* name, const char* title)$/;"	f
+ifile	pulsetree.C	/^   std::ifstream ifile;$/;"	m	class:OscBin	file:
+ifname	pulsetree.C	/^   std::string ifname;     \/\/ to use input file name for messages$/;"	m	class:OscBin	file:
+ifname	pulsetree.C	/^   std::string ifname;$/;"	m	class:Osc	file:
+ifsize	pulsetree.C	/^   Long64_t ifsize;$/;"	m	class:OscBin	file:
+index_	laserfit.C	/^   std::map<std::string, int> index_;$/;"	m	class:Fit	file:
+index_	laserfit.C	/^   std::map<std::string, int> index_;$/;"	m	class:Fitter	file:
+index_	pulse.C	/^   std::map<std::string, int> index_;$/;"	m	class:Fitter	file:
+init_chain	striptree.C	/^TChain* init_chain()$/;"	f
+intfun	utils.C	/^TF1* intfun(TF1* fun) {$/;"	f
+intgaus	utils.C	/^Double_t intgaus(TH1* h)$/;"	f
+ipar_A	current/pulse.C	/^   enum {ipar_A=0, ipar_x0, ipar_tau1, ipar_tau2, ipar_T, ipar_sigma};$/;"	e	enum:PulseFunction::__anon1	file:
+ipar_T	current/pulse.C	/^   enum {ipar_A=0, ipar_x0, ipar_tau1, ipar_tau2, ipar_T, ipar_sigma};$/;"	e	enum:PulseFunction::__anon1	file:
+ipar_sigma	current/pulse.C	/^   enum {ipar_A=0, ipar_x0, ipar_tau1, ipar_tau2, ipar_T, ipar_sigma};$/;"	e	enum:PulseFunction::__anon1	file:
+ipar_tau1	current/pulse.C	/^   enum {ipar_A=0, ipar_x0, ipar_tau1, ipar_tau2, ipar_T, ipar_sigma};$/;"	e	enum:PulseFunction::__anon1	file:
+ipar_tau2	current/pulse.C	/^   enum {ipar_A=0, ipar_x0, ipar_tau1, ipar_tau2, ipar_T, ipar_sigma};$/;"	e	enum:PulseFunction::__anon1	file:
+ipar_x0	current/pulse.C	/^   enum {ipar_A=0, ipar_x0, ipar_tau1, ipar_tau2, ipar_T, ipar_sigma};$/;"	e	enum:PulseFunction::__anon1	file:
+jet_dphi_met	mkplain/MkProPlain.C	/^   Float_t  jet_dphi_met[100];$/;"	m	namespace:Tree	file:
+jet_eta	mkplain/MkProPlain.C	/^   Float_t  jet_eta[100];$/;"	m	namespace:Tree	file:
+jet_mt	mkplain/MkProPlain.C	/^   Float_t  jet_mt[100];$/;"	m	namespace:Tree	file:
+jet_phi	mkplain/MkProPlain.C	/^   Float_t  jet_phi[100];$/;"	m	namespace:Tree	file:
+jet_pt	mkplain/MkProPlain.C	/^   Float_t  jet_pt[100];$/;"	m	namespace:Tree	file:
+laser123	laser123.C	/^void laser123(const char* ifname="123-close-tuneV-30mV.out")$/;"	f
+laserfit	laserfit.C	/^void laserfit() {$/;"	f
+laserfit_alone	laserfit.C	/^void laserfit_alone() {$/;"	f
+laserfit_works	laserfit.C	/^void laserfit_works() {$/;"	f
+left	utils.C	/^void left()      { movestat(0.15,0.5, 0.35,0.4); }$/;"	f
+leftgaus	utils.C	/^void leftgaus()  { movestat(0.15,0.5, 0.35,0.4); }$/;"	f
+lfit	point-debugfit.C	/^Double_t lfit(const Float_t x[], const Float_t y[]$/;"	f
+lfit	point.C	/^Double_t lfit(const Float_t x[], const Float_t y[]$/;"	f
+lg	utils.C	/^void lg() {leftgaus();}$/;"	f
+lin	utils.C	/^void lin() {$/;"	f
+linfit	linfit.C	/^void linfit()$/;"	f
+lmaxx	point.C	/^   Float_t lmaxx[8];       \/\/ x position of the local maximum$/;"	m	class:OscFit	file:
+lmaxy	point.C	/^   Float_t lmaxy[8];       \/\/ y position of the local maximum$/;"	m	class:OscFit	file:
+log	utils.C	/^void log() {$/;"	f
+lwidth_	pulse.C	/^   Int_t lwidth_;$/;"	m	class:Fitter	file:
+m_jet01	mkplain/MkProPlain.C	/^   Float_t  m_jet01;             \/\/ invariant mass of two leading jets$/;"	m	namespace:Tree	file:
+main	arrtree.C	/^int main(int argc, char *argv[])                      \/\/ w\/o int ACLiC warning ~ "no type"$/;"	f
+main	arrtree_array.C	/^int main(int argc, char *argv[])                      \/\/ w\/o int ACLiC warning ~ "no type"$/;"	f
+main	classtree/classtree.C	/^int main(int argc, char* argv[])$/;"	f
+main	gauss.C	/^int main(int argc, char *argv[])$/;"	f
+main	root.cpp	/^main(int argc, char *argv[])$/;"	f
+main	runtree/runtree.C	/^int main(int argc, char *argv[])                   \/\/ w\/o int will be warning ~ "no type"$/;"	f
+main	sp3.C	/^int main(int argc, char *argv[])                      \/\/ w\/o int ACLiC warning ~ "no type"$/;"	f
+main	sp3/sp3.C	/^int main(int argc, char *argv[])                   \/\/ w\/o int will be warning ~ "no type"$/;"	f
+main	tree_array.C	/^int main(int argc, char *argv[])                      \/\/ w\/o int ACLiC warning ~ "no type"$/;"	f
+main	tree_iarray.C	/^int main(int argc, char *argv[])                      \/\/ w\/o int ACLiC warning ~ "no type"$/;"	f
+main	xydy.C	/^int main(int argc, char *argv[])                      \/\/ w\/o int ACLiC warning ~ "no type"$/;"	f
+main	xydy_simple.C	/^main()$/;"	f
+met_phi	mkplain/MkProPlain.C	/^   Float_t  met_phi;$/;"	m	namespace:Tree	file:
+met_pt	mkplain/MkProPlain.C	/^   Float_t  met_pt;              \/\/ missingET$/;"	m	namespace:Tree	file:
+mgtemp	utils.C	/^TMultiGraph* mgtemp(const char* name, const char* title)$/;"	f
+mht_phi	mkplain/MkProPlain.C	/^   Float_t  mht_phi;$/;"	m	namespace:Tree	file:
+mht_pt	mkplain/MkProPlain.C	/^   Float_t  mht_pt;              \/\/ missingHT$/;"	m	namespace:Tree	file:
+millisecond	point.C	/^   Int_t millisecond;$/;"	m	struct:PulseBuffer	file:
+millisecond	pulsetree.C	/^   Int_t millisecond;$/;"	m	struct:PulseBuffer	file:
+millisecond	pulsetree.C	/^   UShort_t millisecond;$/;"	m	struct:OscTime	file:
+minute	point.C	/^   Int_t minute;$/;"	m	struct:PulseBuffer	file:
+minute	pulsetree.C	/^   Int_t minute;$/;"	m	struct:PulseBuffer	file:
+minute	pulsetree.C	/^   UShort_t minute;$/;"	m	struct:OscTime	file:
+mkplain	mkplain/mkplain.C	/^TTree* mkplain(TTree* tree)$/;"	f
+mkplain	mkplain/mkplain.C	/^TTree* mkplain(const char* ifname="tmb_plain_tree\/data-out.root")$/;"	f
+mkread	utils.C	/^TTree* mkread(const char* fname, bool addFriend)$/;"	f
+mkread_Ngen	utils.C	/^Int_t mkread_Ngen = 0;  \/\/ Global counter for Ngen$/;"	v
+month	point.C	/^   Int_t month;$/;"	m	struct:PulseBuffer	file:
+month	pulsetree.C	/^   Int_t month;$/;"	m	struct:PulseBuffer	file:
+month	pulsetree.C	/^   UShort_t month;$/;"	m	struct:OscTime	file:
+movestat	utils.C	/^void movestat(Double_t x1NDC, Double_t y1NDC, Double_t xlen, Double_t ylen)$/;"	f
+mu_dR	mkplain/MkProPlain.C	/^   Float_t  mu_dR[100];$/;"	m	namespace:Tree	file:
+mu_dRpt	mkplain/MkProPlain.C	/^   Float_t  mu_dRpt[100];$/;"	m	namespace:Tree	file:
+mu_dphi_met	mkplain/MkProPlain.C	/^   Float_t  mu_dphi_met[100];$/;"	m	namespace:Tree	file:
+mu_etHalo	mkplain/MkProPlain.C	/^   Float_t  mu_etHalo[100];      \/\/ total transverse energy measured in the calorimeter in the anulus between 0.1 and 0.4 centered around the muon, for isolated muons cut < 2.5 GeV$/;"	m	namespace:Tree	file:
+mu_eta	mkplain/MkProPlain.C	/^   Float_t  mu_eta[100];$/;"	m	namespace:Tree	file:
+mu_ettrack	mkplain/MkProPlain.C	/^   Float_t  mu_ettrack[100];     \/\/ track isolation: sum of tracks pT in cone 0.5, for isolated muon < 2.5 GeV$/;"	m	namespace:Tree	file:
+mu_isocal	mkplain/MkProPlain.C	/^   Float_t  mu_isocal[100];      \/\/ calorimeter isolation: difference of calorimeter energy in cones 0.6 and 0.4 around the muon, for isolated muons < 3.5 GeV$/;"	m	namespace:Tree	file:
+mu_mt	mkplain/MkProPlain.C	/^   Float_t  mu_mt[100];$/;"	m	namespace:Tree	file:
+mu_nseg	mkplain/MkProPlain.C	/^   Int_t    mu_nseg[100];$/;"	m	namespace:Tree	file:
+mu_phi	mkplain/MkProPlain.C	/^   Float_t  mu_phi[100];$/;"	m	namespace:Tree	file:
+mu_pt	mkplain/MkProPlain.C	/^   Float_t  mu_pt[100];$/;"	m	namespace:Tree	file:
+n	arrtree_simple.C	/^Int_t    n[3];$/;"	m	namespace:Tree	file:
+n	tree_example.C	/^   Int_t    n;$/;"	m	namespace:Tree	file:
+nCh	osc.C	/^      Int_t nCh() const {return oscCh->GetEntries();}$/;"	f	class:OscEvent
+nbi	utils.C	/^Int_t nbi(Int_t n) {$/;"	f
+nchan	pulsetree.C	/^   Int_t nchan;$/;"	m	class:OscBin	file:
+nchan_	laserfit.C	/^   unsigned nchan_;$/;"	m	class:FitBoard	file:
+nchan_	pulse.C	/^   unsigned nchan_;$/;"	m	class:FitBoard	file:
+nchan_max_	laserfit.C	/^   static const Int_t nchan_max_ = 8;$/;"	m	class:FitBoard	file:
+nchan_max_	pulse.C	/^   static const Int_t nchan_max_ = 8;$/;"	m	class:FitBoard	file:
+ndi	utils.C	/^void ndi(Int_t Ndivisions) {axisNdivisions(Ndivisions);}$/;"	f
+nem	mkplain/MkProPlain.C	/^   Int_t    nem;$/;"	m	namespace:Tree	file:
+new_remark	pan.C	/^void new_remark() {$/;"	f
+newcan	utils.C	/^TCanvas* newcan(Int_t width, Int_t height, const char* name, const char* title)$/;"	f
+nextcan	sp.C	/^const char* nextcan(const char* base) {$/;"	f
+nextcan	sp3.C	/^const char* nextcan(const char* base) {$/;"	f
+nextcan	utils.C	/^const char* nextcan(const char* base) {$/;"	f
+nextname	sp.C	/^const char* nextname(const char* base) {$/;"	f
+nextname	utils.C	/^const char* nextname(const char* base) {$/;"	f
+nfitpoints	nfitpoints.C	/^void nfitpoints()$/;"	f
+ngaus	utils.C	/^Double_t ngaus(TH1* h)$/;"	f
+njet	mkplain/MkProPlain.C	/^   Int_t    njet;$/;"	m	namespace:Tree	file:
+nlen	utils.C	/^int nlen(const std::string str)$/;"	f
+nmu	mkplain/MkProPlain.C	/^   Int_t    nmu;$/;"	m	namespace:Tree	file:
+nogri	utils.C	/^void nogri() {$/;"	f
+nostatover	utils.C	/^void nostatover() {$/;"	f
+np	laserfit.C	/^   Float_t np[8];$/;"	m	class:OscFit	file:
+np	point-debugfit.C	/^   Float_t np[8];$/;"	m	class:OscFit	file:
+np	point.C	/^   Float_t np[8];$/;"	m	class:OscFit	file:
+np	pulse.C	/^   Float_t np[8];$/;"	m	class:OscFit	file:
+npar_	current/pulse.C	/^   Int_t npar_;$/;"	m	class:PulseFunction	file:
+npar_	laserfit.C	/^   Int_t npar_;$/;"	m	class:Fit	file:
+npar_	laserfit.C	/^   Int_t npar_;$/;"	m	class:Fitter	file:
+npar_	pulse.C	/^   Int_t npar_;$/;"	m	class:Fitter	file:
+npe	utils.C	/^void npe(const char* hname)$/;"	f
+npline	laserfit.C	/^   Float_t npline[8];$/;"	m	class:OscFit	file:
+npline	point-debugfit.C	/^   Float_t npline[8];$/;"	m	class:OscFit	file:
+npline	point.C	/^   Float_t npline[8];$/;"	m	class:OscFit	file:
+npline	pulse.C	/^   Float_t npline[8];$/;"	m	class:OscFit	file:
+ntag	mkplain/MkProPlain.C	/^   Int_t    ntag;                \/\/ the number of b-tagged jets$/;"	m	namespace:Tree	file:
+nul	utils.C	/^void nul(Axis_t min)$/;"	f
+number	pulsetree.C	/^   UInt_t number;$/;"	m	struct:OscTime	file:
+ok	point-debugfit.C	/^   Bool_t ok[8];$/;"	m	class:OscFit	file:
+ok	point.C	/^   Bool_t ok[8];$/;"	m	class:OscFit	file:
+ok	pulse.C	/^   Bool_t ok[8];$/;"	m	class:OscFit	file:
+operator !	pulsetree.C	/^   bool operator !() const {return !status;}$/;"	f	class:OscBin
+operator ()	utils.C	/^   double operator() (double* x, double*) const { $/;"	f	class:DerivativeFunctor
+operator ()	utils.C	/^   double operator() (double* x, double*) const { $/;"	f	class:IntegralFunctor
+operator <<	laserfit.C	/^   Fit& operator <<(TF1* f) {$/;"	f	class:Fit
+operator <<	laserfit.C	/^   Fit& operator <<(const std::string& parname) {$/;"	f	class:Fit
+operator <<	laserfit.C	/^   Fitter& operator <<(const std::string& parname) {$/;"	f	class:Fitter
+operator <<	pulse.C	/^   Fitter& operator <<(const std::string& parname) {$/;"	f	class:Fitter
+operator =	point.C	/^   PulseBuffer& operator =(const PulseBuffer& buf) {$/;"	f	struct:PulseBuffer
+operator =	pulsetree.C	/^   PulseBuffer& operator =(const PulseBuffer& buf) {$/;"	f	struct:PulseBuffer
+operator []	laserfit.C	/^   Fitter* operator [](Int_t chan) {$/;"	f	class:FitBoard
+operator []	pulse.C	/^   Fitter* operator [](Int_t chan) {$/;"	f	class:FitBoard
+osc	osc.C	/^TTree* osc()$/;"	f
+oscBin	pulsetree.C	/^   OscBin oscBin;                \/\/ oscilloscope binary file reader$/;"	m	class:Osc	file:
+oscCh	osc.C	/^      TClonesArray* oscCh;                         \/\/-> array of OscChannel$/;"	m	class:OscEvent	file:
+oscChannel	drs.C	/^      const OscChannel* oscChannel(int channelNo) const {$/;"	f	class:OscEvent
+oscChannel	osc.C	/^      const OscChannel* oscChannel(int ich) const {return (const OscChannel*) oscCh->At(ich);}$/;"	f	class:OscEvent
+oscChannel	point.C	/^      const OscChannel* oscChannel(int channelNo) const {$/;"	f	class:OscEvent
+oscChannels	drs.C	/^      TClonesArray* oscChannels;          \/\/-> array of OscChannel$/;"	m	class:OscEvent	file:
+oscChannels	point.C	/^      TClonesArray* oscChannels;          \/\/-> array of OscChannel$/;"	m	class:OscEvent	file:
+oscRecord	pulsetree.C	/^   OscRecord oscRecord;$/;"	m	class:OscBin	file:
+p0	current/pulsemax.C	/^   Float_t p0[8];          \/\/ slope in y = a*x + b$/;"	m	class:OscFit	file:
+p0	laserfit.C	/^   Float_t p0[8];          \/\/ slope in y = a*x + b$/;"	m	class:OscFit	file:
+p0	point-debugfit.C	/^   Float_t p0[8];          \/\/ slope in y = a*x + b$/;"	m	class:OscFit	file:
+p0	point.C	/^   Float_t p0[8];          \/\/ slope in y = a*x + b$/;"	m	class:OscFit	file:
+p0	pulse.C	/^   Float_t p0[8];          \/\/ slope in y = a*x + b$/;"	m	class:OscFit	file:
+p1	current/pulsemax.C	/^   Float_t p1[8];          \/\/ intercept$/;"	m	class:OscFit	file:
+p1	laserfit.C	/^   Float_t p1[8];          \/\/ intercept$/;"	m	class:OscFit	file:
+p1	point-debugfit.C	/^   Float_t p1[8];          \/\/ intercept$/;"	m	class:OscFit	file:
+p1	point.C	/^   Float_t p1[8];          \/\/ intercept$/;"	m	class:OscFit	file:
+p1	pulse.C	/^   Float_t p1[8];          \/\/ intercept$/;"	m	class:OscFit	file:
+pan	pan.C	/^void pan()$/;"	f
+par_	current/pulse.C	/^   Double_t par_[10];$/;"	m	class:PulseFunction	file:
+par_	laserfit.C	/^   Double_t par_[10];$/;"	m	class:Fit	file:
+par_	laserfit.C	/^   Double_t par_[10];$/;"	m	class:Fitter	file:
+par_	pulse.C	/^   Double_t par_[10];$/;"	m	class:Fitter	file:
+par_init_	pulse.C	/^   Double_t par_init_[10];$/;"	m	class:Fitter	file:
+pargaus	utils.C	/^void pargaus(Double_t& a, Double_t& mean, Double_t& sigma, const char* hname)$/;"	f
+pi	openmp.C	/^void pi()$/;"	f
+pic	utils.C	/^void pic(TString pathname, TString suffix)$/;"	f
+plc	point.C	/^   Float_t plc[8];         \/\/ chi2\/NDF for 4-point fit$/;"	m	class:OscFit	file:
+plot	mkplain/mkplain.C	/^Long64_t plot(TTree* tree, const char* varexp, const TCut& selection, Option_t* option, Long64_t nentries, Long64_t firstentry)$/;"	f
+plot	mkplain/mkplain.C	/^Long64_t plot(TTree* tree, const char* varexp, const char* selection, Option_t* option, Long64_t nentries, Long64_t firstentry)$/;"	f
+plot	point.C	/^   TGraph* plot(Int_t ch=0) const      \/\/ NB: init to non-existant channel$/;"	f	struct:PulseBuffer
+plot	pulsetree.C	/^   TGraph* plot(Int_t ch=0) const      \/\/ NB: init to non-existant channel$/;"	f	struct:PulseBuffer
+plot	utils.C	/^Long64_t plot(TTree* tree, const char* varexp, const TCut& selection, Option_t* option, Long64_t nentries, Long64_t firstentry)$/;"	f
+plot	utils.C	/^Long64_t plot(TTree* tree, const char* varexp, const char* selection, Option_t* option, Long64_t nentries, Long64_t firstentry)$/;"	f
+plot_endcapOccupancyMap	plot_endcapOccupancyMap.C	/^void plot_endcapOccupancyMap(int run)$/;"	f
+plota	mkplain/mkplain.C	/^Long64_t plota(TTree* tree, const char* varexp, const TCut& selection, Option_t* option, Long64_t nentries, Long64_t firstentry)$/;"	f
+plota	mkplain/mkplain.C	/^Long64_t plota(TTree* tree, const char* varexp, const char* selection, Option_t* option, Long64_t nentries, Long64_t firstentry)$/;"	f
+plota	utils.C	/^Long64_t plota(TTree* tree, const char* varexp, const TCut& selection, Option_t* option, Long64_t nentries, Long64_t firstentry)$/;"	f
+plota	utils.C	/^Long64_t plota(TTree* tree, const char* varexp, const char* selection, Option_t* option, Long64_t nentries, Long64_t firstentry)$/;"	f
+plp0	point.C	/^   Double_t plp0[8];       \/\/ y = p0 + p1*x$/;"	m	class:OscFit	file:
+plp1	point.C	/^   Double_t plp1[8];       \/\/ y = ptp0[i] + ptp1[i]*x$/;"	m	class:OscFit	file:
+plx	point.C	/^   Float_t plx[8];$/;"	m	class:OscFit	file:
+plx0	point.C	/^   Float_t plx0[8];        \/\/ intersection with the x-axis$/;"	m	class:OscFit	file:
+plxmax	point.C	/^   Double_t plxmax[8];     \/\/ fit limits$/;"	m	class:OscFit	file:
+plxmin	point.C	/^   Double_t plxmin[8];     \/\/ fit limits$/;"	m	class:OscFit	file:
+png	utils.C	/^void png(TString pathname, TString suffix)$/;"	f
+point	point-debugfit.C	/^void point(const Float_t xraw[], const Float_t yraw[]$/;"	f
+point	point.C	/^void point(const Float_t xraw[], const Float_t yraw[]$/;"	f
+pol1fast	linfit.C	/^Double_t pol1fast(Int_t np, const Float_t x[], const Float_t y[], Double_t& am, Double_t& bm) $/;"	f
+pol1fast	linfit.C	/^Double_t pol1fast(const Float_t x[], const Float_t y[], Int_t ifirst, Int_t np, Double_t& am, Double_t& bm) $/;"	f
+pol1fast	linfit.C	/^Double_t pol1fast(const Float_t x[], const Float_t y[], const Float_t ey[], Int_t ifirst, Int_t np, Double_t& am, Double_t& bm) $/;"	f
+pol1fast	point-debugfit.C	/^Double_t pol1fast(const Float_t x[], const Float_t y[], const Float_t ey[], Int_t ifirst, Int_t np, Double_t& am, Double_t& bm) $/;"	f
+pol1fast	point.C	/^Double_t pol1fast(const Float_t x[], const Float_t y[], const Float_t ey[], Int_t ifirst, Int_t np, Double_t& am, Double_t& bm) $/;"	f
+postscript	pan.C	/^TPostScript* postscript;$/;"	v
+pow_	current/pulse.C	/^   static Double_t pow_(Double_t x, Int_t n) {$/;"	f	class:MathLim
+print_htemp	utils.C	/^void print_htemp(TH1* h)$/;"	f
+private	openmp.C	23;"	d	file:
+pro	utils.C	/^void pro(const char* prompt) {((TRint*) gROOT->GetApplication())->SetPrompt(prompt);}$/;"	f
+process	striptree.C	/^void process()$/;"	f
+project	mkplain/mkplain.C	/^Long64_t project(TTree* tree, const char* hname, const char* varexp, const char* selection, Option_t* option, Long64_t nentries, Long64_t firstentry)$/;"	f
+project	utils.C	/^Long64_t project(TTree* tree, const char* hname, const char* varexp, const char* selection, Option_t* option, Long64_t nentries, Long64_t firstentry)$/;"	f
+projecta	mkplain/mkplain.C	/^Long64_t projecta(TTree* tree, const char* hname, const char* varexp, const char* selection, Option_t* option, Long64_t nentries, Long64_t firstentry)$/;"	f
+projecta	utils.C	/^Long64_t projecta(TTree* tree, const char* hname, const char* varexp, const char* selection, Option_t* option, Long64_t nentries, Long64_t firstentry)$/;"	f
+ps_bar	pan.C	/^TControlBar* ps_bar = 0;$/;"	v
+ps_close	pan.C	/^void ps_close() {$/;"	f
+ps_open	pan.C	/^const char* ps_open() {$/;"	f
+ps_opened	pan.C	/^bool ps_opened = false;$/;"	v
+ps_save_all	pan.C	/^void ps_save_all() {$/;"	f
+ps_save_current	pan.C	/^void ps_save_current() {$/;"	f
+ps_save_selected	pan.C	/^void ps_save_selected() {$/;"	f
+ps_type	pan.C	/^Int_t ps_type = 112;      \/\/ landscape ps$/;"	v
+pt3c	point-debugfit.C	/^   Float_t pt3c[8];        \/\/ chi2\/NDF for 3-point fit$/;"	m	class:OscFit	file:
+pt3x	point-debugfit.C	/^   Float_t pt3x[8];$/;"	m	class:OscFit	file:
+pt4c	point-debugfit.C	/^   Float_t pt4c[8];        \/\/ chi2\/NDF for 4-point fit$/;"	m	class:OscFit	file:
+pt4x	point-debugfit.C	/^   Float_t pt4x[8];$/;"	m	class:OscFit	file:
+pti	point-debugfit.C	/^   Float_t pti[8];         \/\/ integral which use pt algorithm$/;"	m	class:OscFit	file:
+pti	point.C	/^   Float_t pti[8];         \/\/ integral which use pt algorithm$/;"	m	class:OscFit	file:
+ptok	point-debugfit.C	/^   Bool_t ptok[8];$/;"	m	class:OscFit	file:
+ptok	point.C	/^   Bool_t ptok[8];$/;"	m	class:OscFit	file:
+ptx	point-debugfit.C	/^   Float_t ptx[8];$/;"	m	class:OscFit	file:
+ptx	point.C	/^   Float_t ptx[8];$/;"	m	class:OscFit	file:
+pty	point-debugfit.C	/^   Float_t pty[8];$/;"	m	class:OscFit	file:
+pty	point.C	/^   Float_t pty[8];$/;"	m	class:OscFit	file:
+pulse	current/pulse.C	/^TTree* pulse(TTree *tree$/;"	f
+pulse	current/pulse.C	/^TTree* pulse(const char *ifname="Co60_STM_LSO2x2_NOCAP_NOAMP_split.xml.root"$/;"	f
+pulse	current/pulsemax.C	/^TTree* pulse(TTree *tree$/;"	f
+pulse	current/pulsemax.C	/^TTree* pulse(const char *ifname="Co60_STM_LSO2x2_NOCAP_NOAMP_split.xml.root"$/;"	f
+pulse	laserfit.C	/^TTree* pulse(TTree *tree$/;"	f
+pulse	laserfit.C	/^TTree* pulse(const char *ifname="Co60_STM_LSO2x2_NOCAP_NOAMP_split.xml.root"$/;"	f
+pulse	pulse.C	/^TTree* pulse(TTree *tree$/;"	f
+pulse	pulse.C	/^TTree* pulse(const char *ifname$/;"	f
+pulse3	point-debugfit.C	/^TTree* pulse3(TTree *tree$/;"	f
+pulse3	point-debugfit.C	/^TTree* pulse3(const char *ifname$/;"	f
+pulse3	point.C	/^TTree* pulse3(TTree *tree$/;"	f
+pulse3	point.C	/^TTree* pulse3(const char *ifname$/;"	f
+pulseclass	current/pulse.C	/^void pulseclass($/;"	f
+pulsemax	current/pulsemax.C	/^void pulsemax()$/;"	f
+pulseosc	point-debugfit.C	/^TTree* pulseosc(TTree *tree$/;"	f
+pulseosc	point-debugfit.C	/^TTree* pulseosc(const char *ifname$/;"	f
+pulseosc	point.C	/^TTree* pulseosc(TTree *tree$/;"	f
+pulseosc	point.C	/^TTree* pulseosc(const char *ifname$/;"	f
+pulsetree	pulsetree.C	/^TTree* pulsetree(TTree* tree)$/;"	f
+pulsetree	pulsetree.C	/^TTree* pulsetree(const char* ifname, Int_t entry1=0, Int_t entry2=0)$/;"	f
+qsum	utils.C	/^Float_t qsum(Float_t e1, Float_t e2) {return TMath::Sqrt(e1*e1 + e2*e2);}$/;"	f
+read	tree_array.C	/^   void read(TTree* tree, const char* ifname, bool debug=false)$/;"	f	namespace:Tree
+read	tree_iarray.C	/^   void read(TTree* tree, const char* ifname, bool debug=false)$/;"	f	namespace:Tree
+refit	refit.C	/^void refit()$/;"	f
+rem	pan.C	/^TString rem;$/;"	v
+remark	pan.C	/^void remark(const char* text) {$/;"	f
+remark_all	pan.C	/^void remark_all() {$/;"	f
+remfile	pan.C	/^void remfile() {$/;"	f
+remfile_all	pan.C	/^void remfile_all() {$/;"	f
+reserved	pulsetree.C	/^   UShort_t reserved;$/;"	m	struct:OscTime	file:
+rex	utils.C	/^void rex() {gPad->RedrawAxis("g");}$/;"	f
+rg	utils.C	/^void rg() {rightgaus();}$/;"	f
+right	utils.C	/^void right()     { movestat(0.64,0.6, 0.35,0.4); }$/;"	f
+rightgaus	utils.C	/^void rightgaus() { movestat(0.64,0.5, 0.35,0.4); }$/;"	f
+rootalias	utils.C	34;"	d	file:
+rootcolor	rootcolor.C	/^void rootcolor()$/;"	f
+rooth	utils.C	/^void rooth() {system("nedit -bg LightPink -line 10000 root_hist &");}$/;"	f
+roothCopy	utils.C	/^void roothCopy() {system("cp -p root_hist root_hist.copy.t ; nedit -line 10000 -bg LightPink root_hist.copy.t &");}$/;"	f
+rootlogon	rootlogon.C	/^void rootlogon()$/;"	f
+rootlogon	rootlogon_old.C	/^void rootlogon()$/;"	f
+rtd	classtree.C	/^   Float_t  rtd[8];     \/\/ rtd$/;"	m	class:Disk	file:
+rtd	classtree/classtree.h	/^   Float_t  rtd[8];     \/\/ rtd$/;"	m	class:Disk
+run	runtree/runtree.C	/^   Int_t run;$/;"	m	namespace:Tree	file:
+run	runtree/tadc.C	/^void run(Int_t run) {tadc(run);}$/;"	f
+runNum	runtree/runtree.C	/^int runNum(std::string fname)$/;"	f
+sat	point-debugfit.C	/^   Bool_t sat[8];$/;"	m	class:OscFit	file:
+sat	point.C	/^   Bool_t sat[8];$/;"	m	class:OscFit	file:
+save_all_ps	save_all_ps.C	/^void save_all_ps(const char psfile[] = "xxx.ps")$/;"	f
+sbkg	current/pulse.C	/^   Float_t sbkg[8];        \/\/ sigma of the flat background$/;"	m	class:OscFit	file:
+sbkg	current/pulsemax.C	/^   Float_t sbkg[8];        \/\/ sigma of the flat background$/;"	m	class:OscFit	file:
+sbkg	laserfit.C	/^   Float_t sbkg[8];        \/\/ sigma of the flat background$/;"	m	class:OscFit	file:
+sbkg	point-debugfit.C	/^   Float_t sbkg[8];        \/\/ sigma of the flat background$/;"	m	class:OscFit	file:
+sbkg	point.C	/^   Float_t sbkg[8];        \/\/ sigma of the flat background$/;"	m	class:OscFit	file:
+sbkg	pulse.C	/^   Float_t sbkg[8];        \/\/ sigma of the flat background$/;"	m	class:OscFit	file:
+second	point.C	/^   Int_t second;$/;"	m	struct:PulseBuffer	file:
+second	pulsetree.C	/^   Int_t second;$/;"	m	struct:PulseBuffer	file:
+second	pulsetree.C	/^   UShort_t second;$/;"	m	struct:OscTime	file:
+shift	shift.C	/^void shift()$/;"	f
+showbra	pulsetree.C	/^void showbra(TTree* tree) {$/;"	f
+showbra	utils.C	/^void showbra(TTree* tree) {$/;"	f
+sigma	current/pulse.C	/^   Float_t sigma[8];$/;"	m	class:OscFit	file:
+sigma	current/pulsemax.C	/^   Float_t sigma[8];$/;"	m	class:OscFit	file:
+sigma	laserfit.C	/^   Double_t sigma;$/;"	m	class:PulseParameters	file:
+sigma	laserfit.C	/^   Float_t sigma[8];$/;"	m	class:OscFit	file:
+sigma	point-debugfit.C	/^   Float_t sigma[8];$/;"	m	class:OscFit	file:
+sigma	point.C	/^   Float_t sigma[8];$/;"	m	class:OscFit	file:
+sigma	pulse.C	/^   Double_t sigma;$/;"	m	class:PulseParameters	file:
+sigma	pulse.C	/^   Float_t sigma[8];$/;"	m	class:OscFit	file:
+sigma_	current/pulse.C	/^   Double_t A_, x0_, tau1_, tau2_, T_, sigma_;$/;"	m	class:PulseFunction	file:
+sigmasum	correlation.C	/^TTree* sigmasum()$/;"	f
+sigmax	point.C	/^   Float_t sigmax[8];$/;"	m	class:OscFit	file:
+sigmin	point.C	/^   Float_t sigmin[8];$/;"	m	class:OscFit	file:
+sort	sort.C	/^void sort()$/;"	f
+sp	sp.C	/^TTree* sp(const char* ifname, const char* tree_name, Bool_t plot, Int_t color)$/;"	f
+sp3	sp3.C	/^TTree* sp3(const char* ifname, const char* tree_name, Bool_t plot)$/;"	f
+sp3	sp3/sp3.C	/^TTree* sp3(const char* ifname="data.out", const char* tree_name="t")$/;"	f
+sp_C_header	sp.C	75;"	d	file:
+sp_C_implementation	sp.C	91;"	d	file:
+sp_namespace_Tree	sp.C	22;"	d	file:
+sp_ped	sp.C	/^Double_t sp_ped[3] = {37.7, 29.8, 26.0};     \/\/ ped.out, channels 0, 2, 4. run078.out$/;"	v
+sp_ped	sp3.C	/^Double_t sp_ped[3] = {50, 37, 3};$/;"	v
+sqrt_	current/pulse.C	/^   static Double_t sqrt_(Double_t x) {$/;"	f	class:MathLim
+sr90test	sr90test.C	/^void sr90test()$/;"	f
+statover	utils.C	/^void statover() {$/;"	f
+statstemp	utils.C	/^TPaveText* statstemp(TVirtualPad* can)$/;"	f
+status	pulsetree.C	/^   bool status;$/;"	m	class:OscBin	file:
+striptree	striptree.C	/^void striptree(TString fileName="", Int_t nAPVs=4)$/;"	f
+substitute	utils.C	/^const char* substitute(const std::string& str0, const std::string what, const std::string by)$/;"	f
+t	current/pulse.C	/^   Float_t t[8];$/;"	m	class:OscFit	file:
+t	current/pulsemax.C	/^   Float_t t[8];$/;"	m	class:OscFit	file:
+t	laserfit.C	/^   Float_t t[8];$/;"	m	class:OscFit	file:
+t	point-debugfit.C	/^   Float_t t[8];$/;"	m	class:OscFit	file:
+t	point.C	/^   Float_t t[8];$/;"	m	class:OscFit	file:
+t	pulse.C	/^   Float_t t[8];$/;"	m	class:OscFit	file:
+t	sp.C	/^TTree* t = 0;$/;"	v
+t	sp3.C	/^TTree* t;$/;"	v
+t1	runtree/runtree.C	/^   Int_t t1;$/;"	m	namespace:Tree	file:
+t1	sp.C	/^   Int_t t1;$/;"	m	namespace:Tree	file:
+t1	sp3.C	/^   Int_t t1;$/;"	m	namespace:Tree	file:
+t1	sp3/sp3.C	/^   Int_t t1;$/;"	m	namespace:Tree	file:
+t2	runtree/runtree.C	/^   Int_t t2;$/;"	m	namespace:Tree	file:
+t2	sp.C	/^   Int_t t2;$/;"	m	namespace:Tree	file:
+t2	sp3.C	/^   Int_t t2;$/;"	m	namespace:Tree	file:
+t2	sp3/sp3.C	/^   Int_t t2;$/;"	m	namespace:Tree	file:
+t3	runtree/runtree.C	/^   Int_t t3;$/;"	m	namespace:Tree	file:
+t3	sp.C	/^   Int_t t3;$/;"	m	namespace:Tree	file:
+t3	sp3.C	/^   Int_t t3;$/;"	m	namespace:Tree	file:
+t3	sp3/sp3.C	/^   Int_t t3;$/;"	m	namespace:Tree	file:
+t3x	point-debugfit.C	/^   Float_t t3x[8];$/;"	m	class:OscFit	file:
+t4x	point-debugfit.C	/^   Float_t t4x[8];$/;"	m	class:OscFit	file:
+tadc	runtree/tadc.C	/^void tadc(Int_t run)$/;"	f
+tau1	current/pulse.C	/^   Float_t tau1[8];$/;"	m	class:OscFit	file:
+tau1	current/pulsemax.C	/^   Float_t tau1[8];$/;"	m	class:OscFit	file:
+tau1	laserfit.C	/^   Double_t tau1;$/;"	m	class:PulseParameters	file:
+tau1	laserfit.C	/^   Float_t tau1[8];$/;"	m	class:OscFit	file:
+tau1	point-debugfit.C	/^   Float_t tau1[8];$/;"	m	class:OscFit	file:
+tau1	point.C	/^   Float_t tau1[8];$/;"	m	class:OscFit	file:
+tau1	pulse.C	/^   Double_t tau1;$/;"	m	class:PulseParameters	file:
+tau1	pulse.C	/^   Float_t tau1[8];$/;"	m	class:OscFit	file:
+tau1_	current/pulse.C	/^   Double_t A_, x0_, tau1_, tau2_, T_, sigma_;$/;"	m	class:PulseFunction	file:
+tau2	current/pulse.C	/^   Float_t tau2[8];$/;"	m	class:OscFit	file:
+tau2	current/pulsemax.C	/^   Float_t tau2[8];$/;"	m	class:OscFit	file:
+tau2	laserfit.C	/^   Double_t tau2;$/;"	m	class:PulseParameters	file:
+tau2	laserfit.C	/^   Float_t tau2[8];$/;"	m	class:OscFit	file:
+tau2	point-debugfit.C	/^   Float_t tau2[8];$/;"	m	class:OscFit	file:
+tau2	point.C	/^   Float_t tau2[8];$/;"	m	class:OscFit	file:
+tau2	pulse.C	/^   Double_t tau2;$/;"	m	class:PulseParameters	file:
+tau2	pulse.C	/^   Float_t tau2[8];$/;"	m	class:OscFit	file:
+tau2_	current/pulse.C	/^   Double_t A_, x0_, tau1_, tau2_, T_, sigma_;$/;"	m	class:PulseFunction	file:
+tax	utils.C	/^void tax(const char* format)$/;"	f
+tb	utils.C	/^void tb(const char* fname) {$/;"	f
+tc1	point.C	/^   Int_t tc1;              \/\/ not in use, for compatibility with pulse tree only$/;"	m	struct:PulseBuffer	file:
+tc1	pulsetree.C	/^   Int_t tc1;              \/\/ not in use, for compatibility with pulse tree only$/;"	m	struct:PulseBuffer	file:
+tc2	point.C	/^   Int_t tc2;              \/\/ not in use, for compatibility with pulse tree only$/;"	m	struct:PulseBuffer	file:
+tc2	pulsetree.C	/^   Int_t tc2;              \/\/ not in use, for compatibility with pulse tree only$/;"	m	struct:PulseBuffer	file:
+tcolor	utils.C	/^void tcolor(TTree* tree, Int_t color, Int_t hatch)$/;"	f
+tdcu	utils.C	/^Double_t tdcu(Int_t rtd, Int_t Vpc) {$/;"	f
+tf1_	laserfit.C	/^   TF1* tf1_;                             \/\/!$/;"	m	class:Fitter	file:
+tf1_	pulse.C	/^   TF1* tf1_;                             \/\/!$/;"	m	class:Fitter	file:
+tf1_	utils.C	/^   TF1* tf1_; $/;"	m	class:DerivativeFunctor	file:
+tf1_	utils.C	/^   TF1* tf1_; $/;"	m	class:IntegralFunctor	file:
+tgraph	utils.C	/^TGraph* tgraph(TTree* tree, const char* name, const char* title) {$/;"	f
+time	pulsetree.C	/^   OscTime time;$/;"	m	struct:OscEvent	file:
+time	sp.C	/^void time(TTree* tree, bool fit)$/;"	f
+time	sp3.C	/^void time()$/;"	f
+timer	timer.C	/^void timer()$/;"	f
+tmarker	utils.C	/^void tmarker(TTree* tree, Int_t marker)$/;"	f
+tok	point-debugfit.C	/^   Bool_t tok[8];$/;"	m	class:OscFit	file:
+tok	point.C	/^   Bool_t tok[8];$/;"	m	class:OscFit	file:
+tree	pulsetree.C	/^   TTree* tree;$/;"	m	class:Osc	file:
+tree_array	tree_array.C	/^TTree* tree_array(const char* ifname="run_158.erik", const char* ofname="")$/;"	f
+tree_draw	tree_example.C	/^void tree_draw(const char* ifname="tree_example.root")$/;"	f
+tree_example_C	tree_example.C	37;"	d	file:
+tree_iarray	tree_iarray.C	/^TTree* tree_iarray(const char* ifname="run_158.erik", const char* ofname="")$/;"	f
+tree_read	arrtree.C	/^void tree_read(const char* ifname="run_158.erik.root")$/;"	f
+tree_read	arrtree_array.C	/^void tree_read(const char* ifname="run_158.erik.root")$/;"	f
+tree_read	tree_array.C	/^void tree_read(const char* ifname="run_158.erik.root")$/;"	f
+tree_read	tree_example.C	/^void tree_read(const char* ifname="tree_example.root")$/;"	f
+tree_read	tree_iarray.C	/^void tree_read(const char* ifname="run_158.erik.root")$/;"	f
+tree_write	runtree/runtree.C	/^TTree* tree_write(const char* runlist_fname, const char* ofname)$/;"	f
+tree_write	tree_example.C	/^TTree* tree_write(const char* ofname="tree_example.root")$/;"	f
+triagArea	gauss.C	/^void triagArea()$/;"	f
+ttree	runtree/tadc.C	/^void ttree() {$/;"	f
+uniona	uniona.C	/^void uniona()$/;"	f
+unzoom	utils.C	/^void unzoom() {               \/\/ same as unzoomx()$/;"	f
+unzoomx	utils.C	/^void unzoomx() {$/;"	f
+unzoomxy	utils.C	/^void unzoomxy() {$/;"	f
+unzoomy	utils.C	/^void unzoomy() {$/;"	f
+useBadClass	ClassDef_b.C	/^void useBadClass() {$/;"	f
+usedchan	point.C	/^   Int_t usedchan[4];$/;"	m	struct:PulseBuffer	file:
+usedchan	pulsetree.C	/^   Int_t usedchan[4];$/;"	m	class:OscBin	file:
+usedchan	pulsetree.C	/^   Int_t usedchan[4];$/;"	m	struct:PulseBuffer	file:
+utils_cxx	utils.C	206;"	d	file:
+utils_h	utils.C	37;"	d	file:
+v	arrtree.C	/^   Float_t v[MAXDIM];$/;"	m	namespace:Tree	file:
+v	arrtree_array.C	/^   Int_t    v[19];$/;"	m	namespace:Tree	file:
+v	current/pulse.C	/^   Float_t v[8];$/;"	m	class:OscFit	file:
+v	current/pulsemax.C	/^   Float_t v[8];$/;"	m	class:OscFit	file:
+v	laserfit.C	/^   Float_t v[8];$/;"	m	class:OscFit	file:
+v	point-debugfit.C	/^   Float_t v[8];$/;"	m	class:OscFit	file:
+v	point.C	/^   Float_t v[8];$/;"	m	class:OscFit	file:
+v	pulse.C	/^   Float_t v[8];$/;"	m	class:OscFit	file:
+v	tree_array.C	/^   Float_t v[MAXDIM];$/;"	m	namespace:Tree	file:
+v	tree_iarray.C	/^   Int_t v[MAXDIM];$/;"	m	namespace:Tree	file:
+vccu	classtree.C	/^   Float_t  vccu;       \/\/ Vccu for the whole detector$/;"	m	class:HCyl	file:
+vccu	classtree/classtree.h	/^   Float_t  vccu;       \/\/ Vccu for the whole detector$/;"	m	class:HCyl
+voltage	pulsetree.C	/^   UShort_t voltage[1024];$/;"	m	struct:OscChannel	file:
+vpc	classtree.C	/^   Float_t  vpc;        \/\/ Vpc for this disk$/;"	m	class:Disk	file:
+vpc	classtree/classtree.h	/^   Float_t  vpc;        \/\/ Vpc for this disk$/;"	m	class:Disk
+wenu_mt	mkplain/MkProPlain.C	/^   Float_t  wenu_mt;$/;"	m	namespace:Tree	file:
+wmunu_mt	mkplain/MkProPlain.C	/^   Float_t  wmunu_mt;$/;"	m	namespace:Tree	file:
+x	arrtree_simple.C	/^Float_t  x;$/;"	m	namespace:Tree	file:
+x	drs.C	/^      Float_t x[1024];$/;"	m	class:OscChannel	file:
+x	osc.C	/^      Float_t x[1024];$/;"	m	class:OscChannel	file:
+x	point.C	/^      Float_t x[1024];$/;"	m	class:OscChannel	file:
+x0	laserfit.C	/^   Double_t x0;$/;"	m	class:PulseParameters	file:
+x0	pulse.C	/^   Double_t x0;$/;"	m	class:PulseParameters	file:
+x0_	current/pulse.C	/^   Double_t A_, x0_, tau1_, tau2_, T_, sigma_;$/;"	m	class:PulseFunction	file:
+xmax_	current/pulse.C	/^   Double_t xmin_, xmax_;$/;"	m	class:PulseFunction	file:
+xmax_	laserfit.C	/^   Double_t xmax_;$/;"	m	class:Fitter	file:
+xmax_	pulse.C	/^   Double_t xmax_;$/;"	m	class:Fitter	file:
+xmaxi	laserfit.C	/^   Float_t xmaxi[8];       \/\/ beginning of the local maximum$/;"	m	class:OscFit	file:
+xmaxi	point-debugfit.C	/^   Float_t xmaxi[8];       \/\/ beginning of the local maximum$/;"	m	class:OscFit	file:
+xmaxi	point.C	/^   Float_t xmaxi[8];       \/\/ beginning of the local maximum$/;"	m	class:OscFit	file:
+xmaxi	pulse.C	/^   Float_t xmaxi[8];       \/\/ beginning of the local maximum$/;"	m	class:OscFit	file:
+xmin_	current/pulse.C	/^   Double_t xmin_, xmax_;$/;"	m	class:PulseFunction	file:
+xmin_	laserfit.C	/^   Double_t xmin_;$/;"	m	class:Fitter	file:
+xmin_	pulse.C	/^   Double_t xmin_;$/;"	m	class:Fitter	file:
+xt	laserfit.C	/^   Float_t xt[8];          \/\/ x-coordinate of point to draw tangent$/;"	m	class:OscFit	file:
+xt	point-debugfit.C	/^   Float_t xt[8];          \/\/ x-coordinate of point to draw tangent$/;"	m	class:OscFit	file:
+xt	point.C	/^   Float_t xt[8];          \/\/ x-coordinate of point to draw tangent$/;"	m	class:OscFit	file:
+xt	pulse.C	/^   Float_t xt[8];          \/\/ x-coordinate of point to draw tangent$/;"	m	class:OscFit	file:
+xydy	xydy.C	/^TGraphErrors* xydy(const char* ifname)$/;"	f
+xydy_simple	xydy_simple.C	/^void xydy_simple(const char* fname="xydy.dat")$/;"	f
+xydylog	xydylog.C	/^void xydylog(char* fname)$/;"	f
+xzero	xzero.C	/^Double_t xzero(TF1* f, Double_t xmin=0)$/;"	f
+y	drs.C	/^      Float_t y[1024];$/;"	m	class:OscChannel	file:
+y	osc.C	/^      Float_t y[1024];$/;"	m	class:OscChannel	file:
+y	point.C	/^      Float_t y[1024];$/;"	m	class:OscChannel	file:
+year	point.C	/^   Int_t year;$/;"	m	struct:PulseBuffer	file:
+year	pulsetree.C	/^   Int_t year;$/;"	m	struct:PulseBuffer	file:
+year	pulsetree.C	/^   UShort_t year;$/;"	m	struct:OscTime	file:
+ymaxi	laserfit.C	/^   Float_t ymaxi[8];       \/\/ beginning of the local maximum$/;"	m	class:OscFit	file:
+ymaxi	point-debugfit.C	/^   Float_t ymaxi[8];       \/\/ beginning of the local maximum$/;"	m	class:OscFit	file:
+ymaxi	point.C	/^   Float_t ymaxi[8];       \/\/ beginning of the local maximum$/;"	m	class:OscFit	file:
+ymaxi	pulse.C	/^   Float_t ymaxi[8];       \/\/ beginning of the local maximum$/;"	m	class:OscFit	file:
+yscal	point-debugfit.C	/^   Float_t yscal[8];       \/\/ average of three points around the maximum$/;"	m	class:OscFit	file:
+yscal	point.C	/^   Float_t yscal[8];       \/\/ average of three points around the maximum$/;"	m	class:OscFit	file:
+yt	laserfit.C	/^   Float_t yt[8];          \/\/ y-coordinate of point to draw tangent$/;"	m	class:OscFit	file:
+yt	point-debugfit.C	/^   Float_t yt[8];          \/\/ y-coordinate of point to draw tangent$/;"	m	class:OscFit	file:
+yt	point.C	/^   Float_t yt[8];          \/\/ y-coordinate of point to draw tangent$/;"	m	class:OscFit	file:
+yt	pulse.C	/^   Float_t yt[8];          \/\/ y-coordinate of point to draw tangent$/;"	m	class:OscFit	file:
+zee_m	mkplain/MkProPlain.C	/^   Float_t  zee_m;$/;"	m	namespace:Tree	file:
+zmumu_m	mkplain/MkProPlain.C	/^   Float_t  zmumu_m;$/;"	m	namespace:Tree	file:
+zoom	utils.C	/^void zoom(Axis_t xmin, Axis_t xmax) {$/;"	f
+~Fitter	pulse.C	/^   virtual ~Fitter() {$/;"	f	class:Fitter
+~InputDialog	dialogs.C	/^InputDialog::~InputDialog()$/;"	f	class:InputDialog
+~OscChannel	drs.C	/^      ~OscChannel() {}$/;"	f	class:OscChannel
+~OscChannel	osc.C	/^      ~OscChannel() {}$/;"	f	class:OscChannel
+~OscChannel	point.C	/^      ~OscChannel() {}$/;"	f	class:OscChannel
+~OscEvent	drs.C	/^      ~OscEvent() {$/;"	f	class:OscEvent
+~OscEvent	osc.C	/^      ~OscEvent() {$/;"	f	class:OscEvent
+~OscEvent	point.C	/^      ~OscEvent() {$/;"	f	class:OscEvent
+~PulseBuffer	point.C	/^   ~PulseBuffer() {$/;"	f	struct:PulseBuffer
+~PulseBuffer	pulsetree.C	/^   ~PulseBuffer() {$/;"	f	struct:PulseBuffer
+~PulseFunction	current/pulse.C	/^  ~PulseFunction() {$/;"	f	class:PulseFunction
