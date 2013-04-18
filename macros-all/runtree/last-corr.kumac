@@ -1,0 +1,102 @@
+*** Begin of history file: Thu May 28 23:15:01 2009
+exec tadc3 run56.out
+nt/pl 1.ad1141
+zone
+opt stat
+nt/pl 1.ad1141
+exec tadc3 run57.out
+zone
+nt/pl 1.ad1141
+nt/pl 1.ad1142
+exec tadc3 run59.out
+nt/pl 1.ad1142
+zone
+nt/pl 1.ad1142
+exec tadc3 run60.out
+exec tadc3 run57.out
+exec tadc3 run60.out
+exec tadc3 run60.out
+exec tadc3 run60.out
+h/de * ; exec tadc3 run60.out
+exec tadc3#time
+exec tadc3#ampl
+exec tadc3#ampl
+exec tadc3#time
+exec tadc3#time
+exec tadc3#time
+exec tadc3#time
+h/del 0
+exec tadc3 run54.out
+nt/pri 1
+nt/pl 1.ad1141
+zone
+nt/pl 1.ad1141
+nt/pl 1.ad1142
+nt/pl 1.ad1143
+nt/pl 1.ad1142
+nt/pl 1.ad1141
+nt/pl 1.ad1142
+nt/cut 1 500<ad1141<8000
+nt/cut 1 500<ad1142<6000
+nt/pl 1.ad1142 $1
+h/fit 1000000 g
+nt/pl 1.adc22491 $`1
+nt/pl 1.adc22491 $1
+nt/pl 1.adc22493 $1
+nt/cut 2 0<adc22491<150.and.200<adc22492<600
+nt/pl 1.ad1142 $1.and.$2
+h/fit 1000000 g
+h/fit 1000000(20:100) g
+nt/pl 1.ad1142%adc22491 $1.and.$2
+nt/pl 1.ad1142%adc22491 $1.and.$2.and.1900<ad1142<1980
+igset mtyp 6
+nt/pl 1.ad1142%adc22491 $1.and.$2.and.1900<ad1142<1980
+h/crea/prof 123 ' ' 10 0 150 1900 2000
+nt/proj 123 1.ad1142%adc22491 $1.and.$2
+h/set/min 123 1900
+h/set/max 123 2000
+h/pl 123
+h/fit 123 p1
+nt/pl 1.ad1142-.05*adc22491 $1.and.$2.and.1900<ad1142<1980
+h/fit 1000000 g
+nt/pl 1.ad1142-.05*adc22491%adc22493 $1.and.$2.and.1900<ad1142<1980
+h/crea/prof 123 ' ' 10 0 600 1900 2000
+nt/proj 123 1.ad1142-.05*adc22491%adc22493 $1.and.$2
+h/set/min 123 1900
+h/set/max 123 2000
+h/pl 123
+h/fit 123 p1
+nt/pl 1.ad1142-.05*adc22491+.044*adc22493 $1.and.$2
+h/fit 1000000 g
+opt stat
+nt/pl 1.ad1142-.05*adc22491+.044*adc22493 $1.and.$2
+nt/pl 1.ad1142-.05*adc22491+.044*adc22493 $1.and.$2
+nt/pri 1
+nt/pl 1.adc22493
+sh xcalc &
+exec tadc3 run61.out
+zone
+nt/pl 1.adc22491
+h/fit 1000000(2:20) g
+nt/pl 1.adc22492
+h/fit 1000000 g
+nt/pl 1.adc22493
+h/fit 1000000 g
+exec tadc3 run60.out
+zone
+nt/pl 1.adc22493
+exec tadc3 run54.out
+zone
+nt/pl 1.adc22493
+nt/pl 1.adc22493
+h/fit 1000000(20:50) g
+h/fit 1000000(200.:500.) g
+h/fit 1000000(240.:500.) g
+h/fit 1000000(250.:500.) g
+h/fit 1000000(300.:500.) g
+h/del 0
+exec tadc3 run62.out
+zone
+nt/pl 1.adc22491
+h/fit 1000000(2:20) g
+*** End   of history file: Fri May 29 09:32:55 2009

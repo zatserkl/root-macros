@@ -1,0 +1,2 @@
+cp -i ~/macros/rootrc ./.rootrc
+cp -i ~/macros/rootlogon-local.C ./rootlogon.C

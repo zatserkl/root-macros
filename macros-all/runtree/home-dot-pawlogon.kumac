@@ -1,0 +1,1282 @@
+*                                      @METAGS PAWLOGON
+*--------------- PAWLOGON ---------------
+*
+MACRO PAWLOGON
+set/filecase keep
+kuip/set/columns 132
+*host_editor 'pico -m -w -t -z'
+*host_pager  pico
+*host_editor ~/bin/ed
+
+* added Feb 7, 2009
+opt stat
+set stat 1111
+opt fit
+
+* use 'double buffering' to restore corrupted HIGZ window
+IGSET 2BUF 11
+
+if $MACHINE = 'SGI' then
+   host_editor 'gvim'
+   host_pager   vim
+else
+   host_editor 'gvim'
+   host_pager   vim
+endif
+
+* shell echo on
+* MACRO/DEFAULTS .,~/paw/macro,~/paw/pe,~/paw/fnal,~/d2/d2macro
+MACRO/DEFAULTS .,~/paw/macro,~/paw/pe
+exec for
+EXEC ALI CREATE
+
+opt zfl1
+* prompt .
+prompt *
+
+* for board.kumac
+g/cr printer d0tcw_hp8000
+
+host_ps ghostscript
+recording 500
+
+mess Default PAWLOGON is executed
+RETURN
+
+*                               Dec 23, 2001
+*---- xx ----
+*
+MACRO xx macro
+lastexec = ''
+g/imp lastexec
+if $UPPER([1])='HELP' .OR. ([macro]='' .AND. [lastexec]='') then
+   mess Usage:   $WORD([0],2,1,#) macro par1 par2 ...
+   if [lastexec]='' then
+      mess global lastexec is undefined
+   else
+      mess Current lastexec = [lastexec]
+   endif
+   stopm
+endif
+
+if [macro]='' then
+   exec $UNQUOTE([lastexec])
+else
+   g/cr lastexec [*]
+   exec $UNQUOTE([*])
+endif
+RETURN
+
+*                               Dec 08, 2001
+*---- webpic ----
+*
+MACRO webpic psfile=paw.ps
+if $UPPER([1])='HELP' .OR. [1]=''.OR.[1]=' ' then
+   mess Usage:    $WORD([0],2,1,#) psfile=paw.ps
+   stopm
+endif
+
+if $OPTION('zfl')=0 .AND. $OPTION('zfl1')=0 then
+   opt zfl1
+endif
+
+if $INDEX([psfile],'.')=0 then
+   file = [psfile].ps
+else
+   file = [fname]
+endif
+
+p/pr [file]
+shell cp [file] ~/public_html/
+RETURN
+
+*                               Sep 28, 2001
+*---- mlist ----
+*
+MACRO mlist file mname=' ' line=0
+if $UPPER([1])='HELP' .OR. [1]=''.OR.[1]=' ' then
+   mess Usage:    $WORD([0],2,1,#) file macro=*
+   stopm
+endif
+
+*if $INDEX([file],'.') = 0 then
+*   file = [file].kumac
+*endif
+*
+*if $FEXIST([file]) = 0 then
+*   mess File [file] is not found
+*   stopm
+*endif
+
+call mlist($QUOTE([file]),$QUOTE([mname]),[line])
+RETURN
+
+*                                         @METAGS d0print
+*--------------- d0print ---------------
+*
+MACRO d0print command='flpr' printer='' psfile='~/tmp/d0print.ps'
+if $UPPER([1])='HELP' then
+   mess Usage:    [0] command='flpr' printer='' psfile='~/tmp/d0print.ps'
+   mess Example:  [0] flpr '''-h fnprt -q d0tcw_hp8000_d'''
+   mess Example:  [0] flpr '''-h fnprt -q d0tcw_color_post'''
+   stopm
+endif
+
+mess '*** printing: ' [command] [printer] [psfile]
+pict/print [psfile]
+shell [command] [printer] [psfile]
+RETURN
+
+*                                         @METAGS flpr
+*--------------- flpr ---------------
+*
+MACRO flpr file='' printer='-q d0tcw_hp8000_d'
+if $UPPER([1])='HELP' .OR. [file]='' then
+   mess Usage:    [0] file printer='-q d0tcw_hp8000_d'
+   stopm
+endif
+
+if $FEXIST([file]) = 0 then
+  mess File [file] is not found
+  stopm
+endif
+
+mess '*** printing: ' [printer] [file]
+shell flpr [printer] [file]
+RETURN
+
+*
+*------------- vcre --------------
+*
+MACRO vcre vname='' dim=0
+if $UPPER([1])='HELP' then
+   mess Usage:    [0] vname dim
+   mess Example:  [0] v 100
+   stopm
+endif
+
+if [name]='' then
+   read vname 'Enter vector name (<CR>=Quit): '
+   if [vname]='' then; stopm; endif
+endif
+if [dim]=0 then
+   read dim 'Enter vector dimension (<CR>=Quit): '
+   if [dim]=0 then; stopm; endif
+endif
+
+sigma [vname]=array([dim])*0
+RETURN
+
+*
+*------------- chi2 --------------
+*
+MACRO chi2
+if $UPPER([1])='HELP' then
+   mess Usage:    [0]
+   mess Example:  [0]
+   stopm
+endif
+chi2 = $CALL('chi2')
+mess chi2 = [chi2]
+RETURN [chi2]
+
+*                               Sep 19, 2001
+*---- head ----
+*
+*MACRO head name file='tmp.kumac'
+MACRO head name
+if $UPPER([1])='HELP' .OR. [1]=''.OR.[1]=' ' then
+   mess Usage:    $WORD([0],2,1,#) name
+   stopm
+endif
+
+USdate = $EXEC(USdate 0)
+call HEAD($QUOTE([name]),$QUOTE([USdate])) 
+RETURN
+*                               Sep 19, 2001
+*---- USdate ----
+*
+MACRO USdate verb=1
+if $UPPER([1])='HELP' .OR. [1]=''.OR.[1]=' ' then
+   mess Usage:    $WORD([0],2,1,#) verb=1
+   stopm
+endif
+ 
+date = $DATE
+day  = $WORD([date],1,1,'/')
+mm   = $WORD([date],2,1,'/')
+year = $WORD([date],3,1,'/')
+* convert mm from string to digit
+mm = [mm]*1
+
+mname(1)  = Jan;  mname(7)  = Jul
+mname(2)  = Feb;  mname(8)  = Aug
+mname(3)  = Mar;  mname(9)  = Sep
+mname(4)  = Apr;  mname(10) = Oct
+mname(5)  = May;  mname(11) = Nov
+mname(6)  = Jun;  mname(12) = Dec
+month = [mname([mm])]
+USdate = [month] [day], [year]
+if [verb] then
+  mess [USdate]
+endif
+RETURN [USdate]
+
+*                                         @METAGS XARGS
+*--------------- XARGS ---------------
+*
+MACRO XARGS
+n = $WORDS($ARGS)
+if [n] > 0 then
+   do i=1,[n]
+      exec $WORD($ARGS,[i],1)
+   enddo
+endif
+RETURN
+
+*                                         @METAGS Win
+*--------------- Win ---------------
+*
+MACRO Win xs=0 ys=0
+if $UPPER([1])='HELP' then
+   mess Usage:    [0] xs ys
+   mess Example:  [0] 16 16
+   stopm
+endif
+
+*opt zfl1
+if [xs] > 0 then; set xsiz [xs]; endif
+if [ys] > 0 then; set ysiz [ys]; endif
+if [xs] > 0 .OR. [ys] > 0 then
+   set xmgr 0
+   set ymgl 0
+   opt nbox
+endif
+RETURN $GRAFINFO('?xsiz') $GRAFINFO('?ysiz')
+
+*                                         @METAGS BigWin
+*--------------- BigWin ---------------
+*
+MACRO BigWin
+opt zfl1
+set xsiz 24
+*set xmgr 0.001
+set xmgr 0.5
+set ymgl 1.2
+set yhti .8
+opt nbox
+*set ncol 16
+RETURN
+*                                         @METAGS MidWin
+*--------------- MidWin ---------------
+*
+MACRO MidWin
+opt zfl1
+set xsiz 24
+set xmgr 0.001
+set ymgl 2
+set yhti .8
+opt nbox
+RETURN
+*                                         @METAGS StdWin
+*--------------- StdWin ---------------
+*
+MACRO StdWin
+opt zfl1
+set xsiz 0
+set xmgr 0
+set ymgl 0
+opt nbox
+*set ncol 16
+RETURN
+
+*                                         @METAGS SetNul
+*--------------- SetNul ---------------
+*
+MACRO SetNul
+exec plocate 'Locate xmin,ymin'
+if [@] = 'UNDEFENED' then; stopm; endif
+xmin = $WORD([@],1,1)
+ymin = $WORD([@],2,1)
+
+exec plocate 'Locate xmax,ymax'
+if [@] = 'UNDEFENED' then; stopm; endif
+xmax = $WORD([@],1,1)
+ymax = $WORD([@],2,1)
+
+if [xmin] > [xmax] then
+   buf = [xmin]
+   xmin = [xmax]
+   xmax = [buf]
+endif
+if [ymin] > [ymax] then
+   buf = [ymin]
+   ymin = [ymax]
+   ymax = [buf]
+endif
+
+null [xmin] [xmax] [ymin] [ymax]
+RETURN
+*                                         @METAGS plocate
+*--------------- plocate ---------------
+*
+MACRO plocate text
+mess [text]
+if $VEXIST(vlocX) then; v/de vlocX; endif
+if $VEXIST(vlocY) then; v/de vlocY; endif
+vlocate vlocX vlocY
+idim = $VLEN(vlocX)
+if [idim] > 0 then
+   xlocate = vlocX([idim])
+   ylocate = vlocY([idim])
+   v/de vlocX,vlocY
+else
+   EXITM 'UNDEFENED'
+endif
+RETURN [xlocate] [ylocate]
+
+*                                         @METAGS s
+*--------------- s ---------------
+*
+MACRO s PICto=SAVED PICfrom=PICT00
+izpict [PICto] SQ
+p/cop [PICfrom] [PICto]
+g/cr SAVEDpic [PICto]   'Saved picture'
+RETURN
+
+*                                         @METAGS p
+*--------------- p ---------------
+*
+MACRO p pic
+if [pic]='' then
+   SAVEDpic = PICT00
+   g/imp SAVEDpic
+   pic = [SAVEDpic]
+endif
+p/pl [pic]
+izpic [pic] N
+RETURN
+
+*                                         @METAGS edpan
+*--------------- edpan ---------------
+*
+MACRO edpan
+panfile = ''
+g/imp panfile
+if [panfile]='' then
+   panfile = 'pan'
+   read panfile 'Enter name of panels file'
+   g/cr panfile [panfile]
+endif
+edit [panfile]
+RETURN
+*                                         @METAGS xpan
+*--------------- xpan ---------------
+*
+MACRO xpan
+panfile = ''
+g/imp panfile
+if [panfile]='' then
+   panfile = 'pan'
+   read panfile 'Enter name of panels file'
+   g/cr panfile [panfile]
+endif
+exec [panfile]
+RETURN
+
+*                             @METAGS XL
+*---------- XL ----------
+*
+MACRO XL
+last 2
+exec last
+ans = Y
+read ans 'Return to panels (Y/N)?'
+if $UPPER([ans]) = Y then
+   XP
+endif
+RETURN
+
+*                                         @METAGS messtit
+*--------------- messtit ---------------
+*
+MACRO messtit id
+if [1]='' .OR. $UPPER([1])='HELP' then
+   mess Usage:    [0] id
+   stopm
+endif
+
+mess $HTITLE([id])
+RETURN
+
+*                                         @METAGS messfun
+*--------------- messfun ---------------
+*
+MACRO messfun fun pars
+if [pars]='' .OR. $UPPER([1])='HELP' then
+   mess Usage:    [0] fun pars
+   stopm
+endif
+
+* old version:
+* fcall=[fun]([pars])
+* but if exist vector with name [fun] it will be used!
+* therefore:
+bra=(
+ket=)
+fcall=[fun]//[bra]//[pars]//[ket]
+mess $CALL([fcall])
+RETURN
+*                                         @METAGS messfun
+*--------------- messfun ---------------
+*
+MACRO messfun fun pars
+if [pars]='' .OR. $UPPER([1])='HELP' then
+   mess Usage:    [0] fun pars
+   stopm
+endif
+
+fcall=[fun]([pars])
+mess $CALL([fcall])
+RETURN
+
+*                                         @METAGS DEBUG
+*--------------- DEBUG ---------------
+*
+MACRO DEBUG opt=SHOW
+if [1]='' .OR. $UPPER([1])='HELP' then
+   mess Usage:    [0] opt=SHOW
+   mess Possible option: ON,OFF,SHOW
+   stopm
+endif
+
+case $UPPER([opt]) in
+   (ON)     call DWAIT('$1')
+   (OFF)    call DWAIT('$0')
+   (SHOW)   call DWAIT('$$')
+   (*)      mess Undefined option [opt]
+endcase
+RETURN
+
+*                                         @METAGS TEST
+*--------------- TEST ---------------
+*
+MACRO TEST opt=SHOW
+if [1]='' .OR. $UPPER([1])='HELP' then
+   mess Usage:    [0] opt=SHOW
+   mess Possible option: ON,OFF,SHOW
+   stopm
+endif
+
+case $UPPER([opt]) in
+   (ON)     call TWAIT('$1')
+   (OFF)    call TWAIT('$0')
+   (SHOW)   call TWAIT('$$')
+   (*)      mess Undefined option [opt]
+endcase
+RETURN
+
+*                                         @METAGS for
+*--------------- for ---------------
+*
+MACRO for
+
+*--- COMMON DEBUG
+COMMON_DEBUG=''; g/imp COMMON_DEBUG
+DECLARE_DEBUG:
+IF [COMMON_DEBUG] = '' THEN
+   APPL COMIS QUIT
+*                                         @METAGS .COMMON_DEBUG
+*                                         01-24-97 10:14pm
+*--------------- COMMON_declaration ---------------
+*
+      LOGICAL DEBUG
+      COMMON /DEBUG/ DEBUG
+      DEBUG = .FALSE.
+      END
+   QUIT
+
+   g/cr COMMON_DEBUG [0]
+   mess [COMMON_DEBUG]: COMMON /DEBUG/ is declared
+ELSEIF [COMMON_DEBUG] <> [0] THEN
+   ans = 'N'
+   mess --- [0]:
+   mess COMMON /DEBUG/ was already declared by [COMMON_DEBUG]
+   read ans 'Redeclare (Y/N)?'
+   if $UPPER([ans]) = 'Y' then
+      COMMON_DEBUG = ''
+      goto DECLARE_DEBUG
+   endif
+ENDIF
+*---
+
+*--- COMMON TEST
+COMMON_TEST=''; g/imp COMMON_TEST
+DECLARE_TEST:
+IF [COMMON_TEST] = '' THEN
+   APPL COMIS QUIT
+*                                         @METAGS .COMMON_TEST
+*                                         01-24-97 10:14pm
+*--------------- COMMON_declaration ---------------
+*
+      LOGICAL TEST
+      COMMON /TEST/ TEST
+      TEST = .FALSE.
+      END
+   QUIT
+
+   g/cr COMMON_TEST [0]
+   mess [COMMON_TEST]: COMMON /TEST/ is declared
+ELSEIF [COMMON_TEST] <> [0] THEN
+   ans = 'N'
+   mess --- [0]:
+   mess COMMON /TEST/ was already declared by [COMMON_TEST]
+   read ans 'Redeclare (Y/N)?'
+   if $UPPER([ans]) = 'Y' then
+      COMMON_TEST = ''
+      goto DECLARE_TEST
+   endif
+ENDIF
+*---
+
+**--- COMMON RANDOM
+*COMMON_RANDOM=''; g/imp COMMON_RANDOM
+*DECLARE_RANDOM:
+*IF [COMMON_RANDOM] = '' THEN
+*   APPL COMIS QUIT
+**                                         @METAGS .COMMON_RANDOM
+**                                         01-24-97 10:14pm
+**--------------- COMMON_declaration ---------------
+**
+*      COMMON /RANDOM/ SEEDSAVE
+*      r = RNDM(0.)
+*      call RDMOUT(SEEDSAVE)
+*      END
+*   QUIT
+*
+*   g/cr COMMON_RANDOM [0]
+*   mess [COMMON_RANDOM]: COMMON /RANDOM/ is declared
+*ELSEIF [COMMON_RANDOM] <> [0] THEN
+*   ans = 'N'
+*   mess --- [0]:
+*   mess COMMON /RANDOM/ was already declared by [COMMON_RANDOM]
+*   read ans 'Redeclare (Y/N)?'
+*   if $UPPER([ans]) = 'Y' then
+*      COMMON_RANDOM = ''
+*      goto DECLARE_RANDOM
+*   endif
+*ENDIF
+**---
+
+APPL COMIS QUIT
+**                                         @METAGS RESTART
+**                                         12-18-98 10:56pm
+**--------------- RESTART ---------------
+**
+*      SUBROUTINE RESTART()
+*COMMON /RANDOM/ SEEDSAVE
+*      use RANDOM
+*      call RDMIN(SEEDSAVE)
+*      END
+**                                         @METAGS NEWSEED
+**                                         12-18-98 10:56pm
+**--------------- NEWSEED ---------------
+**
+*      SUBROUTINE NEWSEED()
+*COMMON /RANDOM/ SEEDSAVE
+*      use RANDOM
+*      call RDMOUT(SEEDSAVE)
+*      END
+
+*                                Mar 15, 2002
+*     ---------------- isdigit ----------------
+*
+      LOGICAL FUNCTION isdigit(ch)
+      character ch
+      if ((ch.GE.'0') .AND. (ch.LE.'9')) then
+         isdigit = .TRUE.
+      else
+         isdigit = .FALSE.
+      endif
+      END
+
+*
+*--------------- mlist --------------
+*
+      SUBROUTINE mlist(kumac,mname,nline)
+      IMPLICIT NONE
+      character*30 kumac, mname
+      integer nline
+      character*30 fname, file, ext*5
+      parameter (ext='kumac')
+      character ch, wildcard, MACRO*5, line*127, uline*127, uname*127
+      integer ispace, itab
+      parameter (itab=9, ispace=32)
+      integer len, lenMACRO, lename, lenfname
+      parameter (wildcard='*', MACRO='MACRO', lenMACRO=5)
+      integer lun, iMACRO, iwhite, iwild1,iwild2
+      integer i, ich, n1,n2, istart,iend, ipos, iprev,inext, number
+      logical printN, all, found, wild1,wild2
+      integer LENOCC, LUNFREE
+
+      if (nline.NE.0) then
+         printN = .TRUE.
+      else
+         printN = .FALSE.
+      endif
+      
+      call fparse(kumac,fname,file,ext)
+      
+      lenfname = INDEX(file, ext)
+      if (lenfname.GT.0) then
+*        .. without .ext
+         lenfname = lenfname-2
+      else
+         lenfname = LENOCC(fname)
+      endif
+      
+*      print*, 'boardnew1: file  = ', file
+*      print*, 'boardnew1: fname = ', fname
+      
+      found = .FALSE.
+      
+*     .. name pattern can contain only wildcards
+      all = .TRUE.
+
+      lename = LENOCC(mname)
+      if (lename.GT.0) then
+*        .. check for wildcards
+         wild1 = .FALSE.
+         n1 = 1
+         if (mname(1:1) .EQ. wildcard) then
+            wild1=.TRUE.
+            n1 = 2
+         endif
+         
+         wild2 = .FALSE.
+         n2 = lename
+         if (lename.GT.1) then
+            if (mname(lename:lename) .EQ. wildcard) then
+               wild2=.TRUE.
+               n2 = lename-1
+            endif
+         endif
+
+         if (n2.GE.n1) then
+*           .. something rest after stripping of wildcards
+            all = .FALSE.
+            uname = mname(n1:n2)
+            call CLTOU(uname)
+            lename = LENOCC(uname)
+
+*           .. wildcards inside macro name is forbidden
+            if (INDEX(mname(n1:n2),wildcard) .GT. 0) then
+               print 1, wildcard
+               RETURN
+            endif
+         else
+            all = .TRUE.
+*           .. macro name will not be used
+            uname = ' '
+         endif
+      endif
+      
+      len = LENOCC(kumac)
+      lun = LUNFREE(40)
+      open (UNIT=lun, FILE=file, STATUS='UNKNOWN', ERR=10000)
+      if (all) then
+         if (printN) then
+            print '(''Line Macro File: '', A)', kumac(1:len)
+            print '(''---- ----- ----'')'
+         else
+            print '(''Macro File: '', A)', kumac(1:len)
+            print '(''----- ----'')'
+         endif
+      endif
+      number = 0
+      do while (.TRUE.)
+         read (lun,'(A)', END=1000) line
+         number = number+1
+         len = LENOCC(line)
+*        .. search for MACRO in uppercase line
+         uline = line
+         call CLTOU(uline)
+         iMACRO = INDEX(uline, MACRO)
+         if (iMACRO.EQ.0) goto 100
+         
+*        .. check symbols before MACRO
+         do i=1,iMACRO-1
+            ich = ICHAR(uline(i:i))
+            if (ich.EQ.ispace .OR. ich.EQ.itab)   goto 200
+*           .. non-whitespace symbol before 'MACRO', get a next line
+            goto 100
+  200    enddo
+
+*        .. symbol after MACRO should be whitespace
+         iwhite = iMACRO+lenMACRO
+         if (iwhite.GT.len) goto 100
+         ich = ICHAR(uline(iwhite:iwhite))
+         if (ich.NE.ispace .AND. ich.NE.itab) goto 100
+
+*        .. start position of macro name
+         istart = iwhite
+         do while (ich.EQ.ispace .OR. ich.EQ.itab)
+            istart = istart+1
+            if (istart.GT.len) goto 100
+            ich = ICHAR(uline(istart:istart))
+         enddo
+
+         if (.NOT.all) then
+*           .. end position of macro name
+            do i=istart, len
+               ich = ICHAR(uline(i:i))
+               if (ich.EQ.ispace .OR. ich.EQ.itab) goto 3000
+               iend = i
+            enddo
+ 3000       continue
+
+            ipos = INDEX(uline(istart:iend), uname(1:lename))
+            if (ipos.EQ.0) goto 100
+            ipos = ipos + istart-1
+
+            if (.NOT.wild1) then
+*              .. should be whitespace before name
+               iprev = ipos-1
+               ich = ICHAR(uline(iprev:iprev))
+               if (ich.NE.ispace .AND. ich.NE.itab) goto 100
+            endif
+            if (.NOT.wild2) then
+*              .. should be whitespace after name
+               inext = ipos+lename
+               ich = ICHAR(uline(inext:inext))
+               if (ich.NE.ispace .AND. ich.NE.itab) goto 100
+            endif
+         endif
+
+*        .. print found macro name
+         found = .TRUE.
+         if (printN) then
+            print '(I4,'': '',A)', number, line(iMACRO:len)
+         else
+*            print '(A)', line(iMACRO:len)
+            print '(A, ''#'', A)', file(1:lenfname), line(istart:len)
+         endif
+  100 enddo
+ 1000 close(lun)
+      if (.NOT.found) then
+         lename = LENOCC(mname)
+         print*, 'MACRO ', mname(1:lename), ' is not found'
+      endif
+      RETURN
+10000 print*, 'ERROR mlist: File ', kumac(1:len), ' is not found'
+      RETURN
+    1 format('MLIST WARNING: Wildcard ', A,
+     &       ' should be first or/and last symbol(s) in macro name')
+      END
+
+*
+*--------------- fitnames --------------
+*
+      SUBROUTINE fitnames(id)
+      Parameter (Npar=8)
+      Character*8 Names(Npar)
+      Names(1)='par1'
+      Names(2)='par2'
+      Names(3)='par3'
+      Names(4)='par4'
+      Names(5)='par5'
+      Names(6)='par6'
+      Names(7)='par7'
+      Names(8)='par8'
+      Call Hfinam(id,names,npar)
+      END
+
+*
+*------------- chi2 ------------
+*
+      FUNCTION chi2
+*     NPFITS  Number of points used in the fit
+*     NFPAR   Number of free parameters
+*     FITCHI  Chisquare
+*     FITPAR  Values of parameters
+*     FITSIG  Errors on parameters
+      COMMON/HCFITS/NCFITS,NPFITS,NFPAR,FITCHI,FITPAR(35),FITSIG(35)
+     &             ,FITDER(35)
+      print*, 'chi2 =', FITCHI
+      chi2 = FITCHI
+      END
+
+*
+*--------------- fitres --------------
+*
+      SUBROUTINE fitres(npoint,npar,chi2,pars,sigs)
+*     NPFITS  Number of points used in the fit
+*     NFPAR   Number of free parameters
+*     FITCHI  Chisquare
+*     FITPAR  Values of parameters
+*     FITSIG  Errors on parameters
+      COMMON/HCFITS/NCFITS,NPFITS,NFPAR,FITCHI,FITPAR(35),FITSIG(35)
+     &             ,FITDER(35)
+      integer npoint, npars
+      real chi2, pars(35), sigs(35)
+      
+      npoint = NPFITS
+      npar   = NFPAR
+      chi2 = FITCHI
+      do i=1,35
+         pars(i) = FITPAR(i)
+         sigs(i) = FITSIG(i)
+      enddo
+
+**      print*, 'npoint =', NPFITS, '   npar =', NFPAR, '   chi2 =',FITCHI
+**      do i=1, NFPAR
+**         print*, FITPAR(i), ' +/- ', FITSIG(i)
+**      enddo
+*      print*, 'npoint =', npoint, '   npar =', npar, '   chi2 =', chi2
+*      do i=1, npar
+*         print*, pars(i), ' +/- ', sigs(i)
+*      enddo
+      END
+
+*
+*--------------- fitprint --------------
+*
+      SUBROUTINE fitprint()
+*     NPFITS  Number of points used in the fit
+*     NFPAR   Number of free parameters
+*     FITCHI  Chisquare
+*     FITPAR  Values of parameters
+*     FITSIG  Errors on parameters
+      COMMON/HCFITS/NCFITS,NPFITS,NFPAR,FITCHI,FITPAR(35),FITSIG(35)
+     &             ,FITDER(35)
+      integer npoint, npars
+      print*, 'npoint =', NPFITS, '   npar =', NFPAR, '   chi2 =',FITCHI
+      do i=1, NFPAR
+         print*, FITPAR(i), ' +/- ', FITSIG(i)
+      enddo
+      END
+
+*                               Sep 19, 2001
+*--------------- HEAD -------------------
+*
+      SUBROUTINE HEAD(name, date)
+      character*30 name, date
+      lenname = LENOCC(name)
+      lendate = LENOCC(date)
+*      print*, 'name=', name, ', data=', date
+*      lun = LUNFREE(1)
+*      open (UNIT=lun, FILE=file, STATUS='UNKNOWN')
+      lun = 6
+      write (lun,1) date(1:lendate), name(1:lenname)
+      write (lun,2) name(1:lenname)
+      write (lun,3)
+      write (lun,4)
+      write (lun,5)
+      write (lun,6)
+      write (lun,7)
+*      close (lun)
+      RETURN
+    1 format ('*',31X,A/'*---- ', A, ' ----'/'*')
+    2 format ('MACRO ', A)
+    3 format ('if $UPPER([1])=''HELP'' .OR. [1]=''''.OR.[1]='' '' then')
+    4 format ('   mess Usage:    $WORD([0],2,1,#)')
+    5 format ('   stopm')
+    6 format ('endif')
+    7 format ('RETURN')
+      END
+
+*                               Sep 19, 2001
+*--------------- HEADf -------------------
+*
+      SUBROUTINE HEADf(file, name, date)
+      character*30 file, name, date
+      lenname = LENOCC(name)
+      lendate = LENOCC(date)
+      lun = LUNFREE(1)
+      open (UNIT=lun, FILE=file, STATUS='UNKNOWN')
+      write (lun,1) date(1:lendate), name(1:lenname)
+      write (lun,2) name(1:lenname)
+      write (lun,3)
+      write (lun,4)
+      write (lun,5)
+      write (lun,6)
+      write (lun,7)
+      close (lun)
+      RETURN
+    1 format ('*',31X,A/'*---- ', A, ' ----'/'*')
+    2 format ('MACRO ', A)
+    3 format ('if $UPPER([1])=''HELP'' .OR. [1]=''''.OR.[1]='' '' then')
+    4 format ('   mess Usage:    $WORD([0],2,1,#)')
+    5 format ('   stopm')
+    6 format ('endif')
+    7 format (/'RETURN')
+      END
+
+*                                         @METAGS .WAIT.COMIS
+*                                         11-15-96 09:45pm
+*--------------- WAIT ---------------
+*
+      SUBROUTINE WAIT(mess)
+      character mess*(*), ch*1
+      length = LENOCC(mess)
+      if (length.GT.0) print 1, mess(1:length)
+      print*, '<CR>=Continue, Q=Quit'
+      read 1, ch
+      if ((ch.EQ.'q') .OR. (ch.EQ.'Q')) STOP
+      RETURN
+    1 FORMAT(A)
+      END
+*                                         @METAGS .DWAIT.COMIS
+*                                         11-15-96 09:45pm
+*--------------- DWAIT ---------------
+*
+      SUBROUTINE DWAIT(mess)
+C      LOGICAL DEBUG
+COMMON /DEBUG/ DEBUG
+      use DEBUG
+      character mess*(*), ch*32
+      character ON*2,OFF*2, SHOW*2, KEY*1
+      data ON/'$1'/, OFF/'$0'/, SHOW/'$$'/, KEY/'$'/
+      length = LENOCC(mess)
+      if (INDEX(mess,KEY).GT.0) then
+         if (mess.EQ.ON) then
+            DEBUG = .TRUE.
+            RETURN
+         endif
+         if (mess.EQ.OFF) then
+            DEBUG = .FALSE.
+            RETURN
+         endif
+         if (mess.EQ.SHOW) then
+            print*, 'DEBUG: Debugging is ', DEBUG
+            RETURN
+         endif
+      endif
+
+      if (.NOT.DEBUG) RETURN
+
+      if (length.GT.0) print 1, mess(1:length)
+      print*, '<CR>=Continue, Q=Quit, 0=Cancel debugging'
+      read 1, ch
+      call CLTOU(ch)
+      if (INDEX(ch,'0').GT.0) DEBUG=.FALSE.
+      if (INDEX(ch,'Q').GT.0) STOP
+      RETURN
+    1 FORMAT(A)
+      END
+*                                         @METAGS .TWAIT.COMIS
+*                                         11-15-96 09:45pm
+*--------------- TWAIT ---------------
+*
+      SUBROUTINE TWAIT(mess)
+C      LOGICAL TEST
+COMMON /TEST/ TEST
+      use TEST
+      character mess*(*), ch*32
+      character ON*2,OFF*2, SHOW*2, KEY*1
+      data ON/'$1'/, OFF/'$0'/, SHOW/'$$'/, KEY/'$'/
+      length = LENOCC(mess)
+      if (INDEX(mess,KEY).GT.0) then
+         if (mess.EQ.ON) then
+            TEST = .TRUE.
+            RETURN
+         endif
+         if (mess.EQ.OFF) then
+            TEST = .FALSE.
+            RETURN
+         endif
+         if (mess.EQ.SHOW) then
+            print*, 'TEST: testing is ', TEST
+            RETURN
+         endif
+      endif
+
+      if (.NOT.TEST) RETURN
+
+      if (length.GT.0) print 1, mess(1:length)
+      print*, '<CR>=Continue, Q=Quit, 0=Cancel testing'
+      read 1, ch
+      call CLTOU(ch)
+      if (INDEX(ch,'0').GT.0) TEST=.FALSE.
+      if (INDEX(ch,'Q').GT.0) STOP
+      RETURN
+    1 FORMAT(A)
+      END
+*                                         @METAGS .MESS.COMIS
+*                                         01-22-98 02:11pm
+*--------------- MESS ---------------
+*
+      SUBROUTINE MESS(line)
+      character line*(*)
+      length = LENOCC(line)
+      if (length.GT.0) print 1, line(1:length)
+      RETURN
+    1 FORMAT(A)
+      END
+
+*                                         @METAGS .YES.COMIS
+*                                         01-22-98 02:11pm
+*--------------- YES ---------------
+*
+      logical function YES(mess)
+      character mess*(*)
+      character ans
+      YES = .FALSE.
+      length = LENOCC(mess)
+      if (length.GT.0) print 1, mess(1:length)
+      print*, 'Y/N (<CR>=Y)?'
+      read 1, ans
+      if ((ans.EQ.'y') .OR. (ans.EQ.'Y') .OR. (ans.EQ.' ')) YES=.TRUE.
+      RETURN
+    1 FORMAT(A)
+      END
+
+*                                         @METAGS .CLOSE.COMIS
+*                                         01-14-98 05:44pm
+*--------------- CLOSE ---------------
+*
+      SUBROUTINE CLOSE(lun)
+      close(lun)
+      END
+
+*                                         @METAGS .LUNFREE
+*                                         01-20-98 02:25pm
+*--------------- LUNFREE ---------------
+*
+      integer function LUNFREE(lunstart)
+      logical used
+      lun = lunstart-1
+      if (lun.LT.0) lun=0
+  100 lun = lun+1
+      inquire (UNIT=lun, OPENED=used)
+      if (used) goto 100
+      LUNFREE = lun
+      END
+*                                         @METAGS .LUNFILE
+*                                         01-20-98 02:40pm
+*--------------- LUNFILE ---------------
+*
+      integer function LUNFILE(file)
+      character*32 file,lofile
+      lofile = file
+      call CUTOL(lofile)
+      inquire (NUMBER=lun, FILE=lofile)
+      LUNFILE = lun
+      END
+*                                         @METAGS .FILELUN
+*                                         01-20-98 02:40pm
+*--------------- FILELUN ---------------
+*
+      SUBROUTINE FILELUN(lun,file)
+      character*(*) file, lofile*32
+      inquire (UNIT=lun, NAME=lofile)
+      call CUTOL(lofile)
+      lenght = LEN(file)
+      file(1:length) = lofile
+      END
+*                                         @METAGS .FCLEAR
+*                                         01-20-98 01:27pm
+*--------------- FCLEAR ---------------
+*
+      SUBROUTINE FCLEAR(file)
+      character*(*) file
+      lun = LUNFREE(40)
+      open (lun, FILE=file, STATUS='UNKNOWN', ERR=10000)
+      endfile lun
+      close(lun)
+      RETURN
+10000 len = LENOCC(file)
+      print*, 'ERROR FCLEAR: File ', file(1:len), ' did not found'
+      END
+
+*                                         @METAGS .FPARSE
+*                                         01-20-98 02:53pm
+*--------------- FPARSE ---------------
+*
+      SUBROUTINE FPARSE(fstr,fname,file,ext)
+      IMPLICIT NONE
+*     .. extension without '.'
+      character*(*) fstr,fname,file,ext
+      character point, slash
+      integer lenfstr,lenext, iname,ipoint, i
+      integer LENOCC
+      data point/'.'/, slash/'/'/
+      
+      lenfstr = LENOCC(fstr)
+      if (lenfstr.EQ.0) then
+         print*, 'ERROR FPARSE: Empty input string'
+         RETURN
+      endif
+      
+*     .. find path if it exists
+      iname = lenfstr
+      do i=lenfstr, 1, -1
+         if (fstr(i:i) .EQ. slash) goto 1000
+         iname=i
+      enddo
+ 1000 continue
+      if (iname.EQ.lenfstr) then
+         print 1, fstr(1:lenfstr)
+    1    format ('ERROR FPARSE: Name ', A, ' looks like directory name')
+         STOP
+      endif
+      
+      lenext = LENOCC(ext)
+      ipoint = lenfstr
+      do while (fstr(ipoint:ipoint).NE.point)
+         if (ipoint.EQ.iname) goto 2000
+         ipoint = ipoint-1
+      enddo
+ 2000 continue
+ 
+      if (ipoint.EQ.iname) then
+         fname = fstr(iname:lenfstr)
+         file  = fstr(1:lenfstr)//point//ext(1:lenext)
+      else
+         fname = fstr(iname:ipoint-1)
+         file  = fstr
+      endif
+      call CUTOL(file)
+      END
+*                                         @METAGS .FPARSE0
+*                                         01-20-98 02:53pm
+*--------------- FPARSE0 ---------------
+*
+      SUBROUTINE FPARSE0(fstr,fname,file,ext)
+      character*(*) fstr,fname,file,ext
+      character f*32, point
+      data point /'.'/
+      f = fstr
+      lenf = LENOCC(f)
+      lene = LENOCC(ext)
+      ipoint = INDEX(f,'.')
+      if (ipoint.EQ.0) then
+         fname = f
+         file  = f(1:lenf)//point//ext(1:lene)
+      else
+         fname = f(1:ipoint-1)
+         file  = f
+      endif
+      call CUTOL(file)
+      END
+QUIT
+RETURN
+
+*                                         @METAGS hc
+*--------------- hc ---------------
+*
+MACRO hc ci=1
+set hcol [ci]
+set pmci [ci]
+RETURN
+
+*                                         @METAGS VTYP
+*--------------- VTYP ---------------
+*
+MACRO VTYP v format
+if ($UPPER([1])='HELP' .OR. [v]='') then
+   mess Usage:    [0] v format
+   mess Type vector to screen (omit trailing zeroes)
+   exitm
+endif
+v/wr [v](:$VLEN([v])) CON [format]
+RETURN
+
+*                               Oct 10, 2001
+*---- SHOWr ----
+*
+MACRO SHOWr
+if $UPPER([1])='HELP' then
+   mess Usage:    $WORD([0],2,1,#)
+   stopm
+endif
+APPL COMIS QUIT
+!show routines
+QUIT
+RETURN
+
+*                                      @METAGS ALI
+*--------------- ALI ---------------
+*
+MACRO ALI op
+if [op] = '' then
+   op = CREATE
+   read op 'MACRO C:\PAW\PAWLOGON#ALI: CReate or DElete aliases? '
+endif
+
+ali/[op] -C hlist    'ld //pawc'
+ali/[op] -C webpic   'exec $ENV(HOME)/.pawlogon.kumac#webpic'
+ali/[op] -C d0print  'exec $ENV(HOME)/.pawlogon.kumac#d0print'
+ali/[op] -C flpr     'exec $ENV(HOME)/.pawlogon.kumac#flpr'
+ali/[op] -C vcre     'exec $ENV(HOME)/.pawlogon.kumac#vcre'
+ali/[op] -C chi2     'exec $ENV(HOME)/.pawlogon.kumac#chi2'
+ali/[op] -C head     'exec $ENV(HOME)/.pawlogon.kumac#head'
+ali/[op] -C USdate   'exec $ENV(HOME)/.pawlogon.kumac#USdate'
+ali/[op] -C mlist    'exec $ENV(HOME)/.pawlogon.kumac#mlist'
+ali/[op] -C ml       'exec $ENV(HOME)/.pawlogon.kumac#mlist'
+ali/[op] -C fitprint 'call fitprint'
+
+ali/[op] -C mt       'set mtyp'
+ali/[op] -C ci       'set pmci'
+ali/[op] -C lc       'set plci'
+ali/[op] -C hc       'exec $ENV(HOME)/.pawlogon.kumac#hc'
+
+*ali/[op] -C corr480  'lcdir \D2\480\CORR; exec D2CORR'
+*ali/[op] -C corr511  'lcdir \D2\511\CORR; exec D2CORR'
+*ali/[op] -C corr550  'lcdir \D2\550\CORR; exec D2CORR'
+*ali/[op] -C corr670  'lcdir \D2\670\CORR; exec D2CORR'
+
+ali/[op] -C edpaw    'edit $ENV(HOME)/.pawlogon.kumac'
+ali/[op] -C xpaw     'exec $ENV(HOME)/.pawlogon.kumac'
+ali/[op] -C wwwpaw   'shell cp $ENV(HOME)/.pawlogon.kumac ~/public_html/pawlogon.kumac'
+
+ali/[op] -C edp      'exec $ENV(HOME)/.pawlogon.kumac#edpan'
+ali/[op] -C xp       'exec $ENV(HOME)/.pawlogon.kumac#xpan'
+ali/[op] -C xl       'exec $ENV(HOME)/.pawlogon.kumac#xl'
+
+ali/[op] -C lin      'opt liny'
+ali/[op] -C log      'opt logy'
+
+ali/[op] -C x        'exec'
+ali/[op] -C xx       'exec $ENV(HOME)/.pawlogon.kumac#xx'
+
+ali/[op] -C sh       'g/cr cwd $SHELL(pwd); shell'
+ali/[op] -C w        'lc [cwd]'
+ali/[op] -C s        'exec $ENV(HOME)/.pawlogon.kumac#s'
+ali/[op] -C p        'exec $ENV(HOME)/.pawlogon.kumac#p'
+ali/[op] -C XARGS    'exec $ENV(HOME)/.pawlogon.kumac#XARGS'
+ali/[op] -C BigWin   'exec $ENV(HOME)/.pawlogon.kumac#BigWin'
+ali/[op] -C MidWin   'exec $ENV(HOME)/.pawlogon.kumac#MidWin'
+ali/[op] -C StdWin   'exec $ENV(HOME)/.pawlogon.kumac#StdWin'
+ali/[op] -C Win      'exec $ENV(HOME)/.pawlogon.kumac#Win'
+ali/[op] -C SetNul   'exec $ENV(HOME)/.pawlogon.kumac#SetNul'
+ali/[op] -C messtit  'exec $ENV(HOME)/.pawlogon.kumac#messtit'
+ali/[op] -C messfun  'exec $ENV(HOME)/.pawlogon.kumac#messfun'
+ali/[op] -C DEBUG    'exec $ENV(HOME)/.pawlogon.kumac#DEBUG'
+ali/[op] -C TEST     'exec $ENV(HOME)/.pawlogon.kumac#TEST'
+*ali/[op] -C CLEAR    'exec C:/PAW/MACRO/CLEAR'
+*ali/[op] -C t        'mess Kharkov time $EVAL(1+$WORD($TIME,1,2,.))'
+ali/[op] -C t        'mess $TIME   $DATE'
+ali/[op] -C sx       'shell x'
+ali/[op] -C me       'shell me'
+ali/[op] -C ed1      'shell me1'
+ali/[op] -C dir      'shell ls -F'
+ali/[op] -C ls       'shell ls --color=auto'
+ali/[op] -C ll       'shell ls -gop'
+ali/[op] -C lsl      'shell ls -gop'
+ali/[op] -C rm       'shell rm'
+ali/[op] -C type     'shell less'
+ali/[op] -C alp      'shell echo on'
+ali/[op] -C gs       'shell ghostscript'
+ali/[op] -C c0       'color 0 .75 .75 .75'
+ali/[op] -C calc     'command ''mess $SIGMA($*)'''
+ali/[op] -C INIcomis 'exec INIcomis'
+ali/[op] -C SHOWr    'exec $ENV(HOME)/.pawlogon.kumac#SHOWr'
+ali/[op] -C sp       'exec sp'
+ali/[op] -C sum      'exec sp#sum'
+ali/[op] -C two      'exec two'
+ali/[op] -C VTYP     'exec $ENV(HOME)/.pawlogon.kumac#vtyp'
+*ali/[op] -C WAITfor  'exec $ENV(HOME)/MACRO/WAITfor'
+*ali/[op] -C q        'mess Type complete command, please.'
+ali/[op] -C bye      'exit'
+RETURN
